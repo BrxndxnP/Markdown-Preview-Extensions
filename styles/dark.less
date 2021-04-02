@@ -996,6 +996,16 @@ pre[data-role="codeBlock"] {
             // background-color: transparent;
         }
 
+        .tag {
+            color: @token-keyword;
+
+            & > .punctuation {
+                // color: @token-comment;
+                // color: @token-punctuation;
+                color: #B2B2B2;
+            }
+        }
+
         .punctuation {
             color: @token-punctuation;
         }
@@ -1046,10 +1056,7 @@ pre[data-role="codeBlock"] {
         //     color: @token-dom;
         // }
 
-        .tag > .punctuation {
-            color: @token-comment;
-        }
-
+      
         .property {
             color: @token-property;
         }
