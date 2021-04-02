@@ -250,19 +250,42 @@ html, body {
             }
 
             &::-webkit-scrollbar-thumb {
-                border-radius: 5px;
-                background-color: rgba(150,150,150,0.66);
-                border: 4px solid rgba(150,150,150,0.66);
+                // border-radius: 5px;
+                background-color: rgba(119, 118, 118, 0.493);
+                border: 4px solid rgba(119, 118, 118, 0.493);
                 background-clip: content-box;
+
+                &:hover {
+                    background-color: rgba(150,150,150,0.66);
+                    border: 4px solid rgba(150,150,150,0.66);
+                    transition: all 1s;
+                }
             }
 
             &::-webkit-scrollbar-track {
-                border-radius: 10px;
+                // border-radius: 10px;
                 background-color: transparent;
+                // background-color: red;
+
+                &:vertical {
+                    margin-top: calc(@code-top-size * 2);
+                }
+
             }
 
             &::-webkit-scrollbar {
                 width: 8px;
+                height: 8px;
+            }
+
+            ::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+
+            ::-webkit-scrollbar-corner {
+                background-color: transparent;
             }
         }
 
