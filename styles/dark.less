@@ -27,8 +27,11 @@
 @token-selector:        #D7BA7D;
 @token-boolean:         @token-keyword;
 // @token-class:           @token-keyword;
-// @token-class:           #4EC9B0;
-@token-class:           #36B58A;
+@token-class:           #4EC9B0;
+// @token-class:           #36B58A;
+
+@token-method:          #D3FA7E;
+@token-function:        #D3FA7E;
 
 @token-attrname:       @token-keyword;
 @token-attrvalue:      @token-property;
@@ -449,8 +452,6 @@ html, body {
             color: @token-string;
         }
 
-        
-
 
         &.class-name {
             color: @token-class;
@@ -466,10 +467,11 @@ html, body {
         }
 
 
-        // &.method, &.function {
-        //     @token-method: #DD4A68;
-        //     color: @token-method;
-        // }
+        &.method, &.function {
+            // @token-method: #DD4A68;
+            // color: @token-method;
+            color: #D3FA7E;
+        }
         
 
         // &.function {
