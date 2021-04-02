@@ -7,7 +7,7 @@
 @link-hover-color:   #40E0D0;  
 
 /*#region Code Block Palette */
-@code-border-color:     #9B9B9B;
+@code-border-color:     #BDBDBD;
 @code-text-color:       #424242;
 @code-top-size:         .8rem;
 // @code-header-size:      calc(@code-top-size * 2.5);
@@ -46,6 +46,14 @@
     @general-font-size: 0.85rem;
     @toc-left-padding-half: 457px;
     @toc-expanded-width: 400px;
+    
+    @toc-background: linear-gradient(to top,
+        rgba(red(@background-body), green(@background-body), blue(@background-body), 1) 0%,
+        rgba(red(@background-body) / 2, green(@background-body) / 2, blue(@background-body) / 2, 0.68) 10%,
+        rgba(red(@background-body) / 3, green(@background-body) / 3, blue(@background-body) / 3, 0.23) 50%, 
+        transparent
+    ) bottom darken(@background-general, 5%) no-repeat;
+
 
     @toc-transition-in-time: 0.5s;
     @toc-transition-out-time: 0.5s;
@@ -239,6 +247,22 @@ html, body {
             animation: hide-scroll 0.5s backwards;
             @keyframes hide-scroll {
                 from, to { overflow: hidden; } 
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: rgba(150,150,150,0.66);
+                border: 4px solid rgba(150,150,150,0.66);
+                background-clip: content-box;
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar {
+                width: 8px;
             }
         }
 
@@ -539,7 +563,7 @@ html body[for="html-export"]:not([data-presentation-mode]) {
             width: calc(100% - @toc-expanded-width);
         }
 
-        .md-sidebar-toc{
+        .md-sidebar-toc {
             position: fixed;
             top: 0;
             left: 0;
@@ -549,13 +573,7 @@ html body[for="html-export"]:not([data-presentation-mode]) {
             overflow-x: hidden;
     
             width: @toc-expanded-width;
-            background: linear-gradient(
-                to top,
-                rgba(red(@background-body), green(@background-body), blue(@background-body), 1) 0%,
-                rgba(red(@background-body) / 2, green(@background-body) / 2, blue(@background-body) / 2, 0.68) 10%,
-                rgba(red(@background-body) / 3, green(@background-body) / 3, blue(@background-body) / 3, 0.23) 50%, 
-                transparent
-              ) bottom @background-body no-repeat;
+            background: @toc-background;
             background-size: 100% 35px;
             animation: slide-in @toc-transition-in-time forwards !important;
             -webkit-animation: slide-in @toc-transition-in-time forwards !important;
@@ -765,7 +783,7 @@ html body[for="html-export"]:not([data-presentation-mode]) {
     border-width: 0;
     outline: none;
     border-radius: 2px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
     
     // background-color: #2ecc71;
     background-color: darken(@background-general, 5%);
