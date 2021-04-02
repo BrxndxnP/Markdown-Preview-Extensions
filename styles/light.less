@@ -24,8 +24,6 @@
 @token-punctuation:     #030303;
 @token-selector:        #887243;
 @token-boolean:         @token-keyword;
-// @token-class:           @token-keyword;
-// @token-class:           #4EC9B0;
 @token-class:           #36B58A;
 @token-method:          #D3FA7E;
 @token-function:        #D3FA7E;
@@ -37,10 +35,6 @@
 @code-expand-icon: 'https://fonts.gstatic.com/s/i/materialicons/expand_more/v12/24px.svg';
 
 /*#endregion Code Block Palette */
-
-
-
-
 
 
 /*#region Theme */
@@ -402,367 +396,6 @@ html, body {
         letter-spacing: 0px;
     }
 
-
-    &[class="language-csharp"] {
-            
-// &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        &.keyword {
-            color: @token-keyword;
-        }
-
-        &.comment, &.prolog, &.doctype, &.cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        &.string {
-            color: @token-string;
-        }
-
-        &.number {
-            color: @token-number;
-        }
-
-        &.unit {
-            color: @token-number;
-        }
-
-
-        &.operator {
-            color: #B2B2B2;
-            // background-color: transparent;
-        }
-
-        &.punctuation {
-            color: @token-punctuation;
-        }
-
-        &.color {
-            color: @token-string;
-        }
-
-
-        &.class-name {
-            color: @token-class;
-        }
-        
-        &.generic.class-name {
-            color: #B8D7A3
-        }
-
-        &.property-access{
-            // color: @token-string;
-            color: @token-property;
-        }
-
-        &.method, &.function {
-            // @token-method: #DD4A68;
-            // color: @token-method;
-            color: #D3FA7E;
-        }
-        
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-        // &.variable {
-        //     color: #4EC9B0;
-        // }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-     
-        &.property {
-            color: @token-property;
-        }
-
-        &.selector {
-            color: @token-selector;
-        }
-
-        &.boolean {
-            color: @token-boolean;
-        }
-
-
-        &.attr-name {
-            color: @token-attrname;
-        }
-
-        &.attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
-        // }
-
-    }
-
-    &[class="language-javascript"] {
-        
-// &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        &.keyword {
-            color: @token-keyword;
-        }
-
-        &.comment, &.prolog, &.doctype, &.cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        &.string {
-            color: @token-string;
-        }
-
-        &.number {
-            color: @token-number;
-        }
-
-        &.unit {
-            color: @token-number;
-        }
-
-
-        &.operator {
-            color: #B2B2B2;
-            // background-color: transparent;
-        }
-
-        &.punctuation {
-            color: @token-punctuation;
-        }
-
-        &.color {
-            color: @token-string;
-        }
-
-
-        &.class-name {
-            color: @token-class;
-        }
-        
-        &.generic.class-name {
-            color: #B8D7A3
-        }
-
-        &.property-access{
-            // color: @token-string;
-            color: @token-property;
-        }
-
-        &.method, &.function {
-            // @token-method: #DD4A68;
-            // color: @token-method;
-            color: #D3FA7E;
-        }
-        
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-        // &.variable {
-        //     color: #4EC9B0;
-        // }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-     
-        &.property {
-            color: @token-property;
-        }
-
-        &.selector {
-            color: @token-selector;
-        }
-
-        &.boolean {
-            color: @token-boolean;
-        }
-
-
-        &.attr-name {
-            color: @token-attrname;
-        }
-
-        &.attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
-        // }
-    }
-
-    &[class="language-sql"] {
-        // &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        &.keyword {
-            color: @token-keyword;
-        }
-
-        &.comment, &.prolog, &.doctype, &.cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        &.string {
-            color: @token-string;
-        }
-
-        &.number {
-            color: @token-number;
-        }
-
-        &.unit {
-            color: @token-number;
-        }
-
-
-        &.operator {
-            color: #B2B2B2;
-            // background-color: transparent;
-        }
-
-        &.punctuation {
-            color: @token-punctuation;
-        }
-
-        &.color {
-            color: @token-string;
-        }
-
-
-        &.class-name {
-            color: @token-class;
-        }
-        
-        &.generic.class-name {
-            color: #B8D7A3
-        }
-
-        &.property-access{
-            // color: @token-string;
-            color: @token-property;
-        }
-
-        &.method, &.function {
-            // @token-method: #DD4A68;
-            // color: @token-method;
-            color: #D3FA7E;
-        }
-        
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-        // &.variable {
-        //     color: #4EC9B0;
-        // }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-     
-        &.property {
-            color: @token-property;
-        }
-
-        &.selector {
-            color: @token-selector;
-        }
-
-        &.boolean {
-            color: @token-boolean;
-        }
-
-
-        &.attr-name {
-            color: @token-attrname;
-        }
-
-        &.attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
-        // }
-
-    }
 
     
     .token {
@@ -1287,3 +920,705 @@ html body[for="html-export"]:not([data-presentation-mode]) {
 /*endregion Mermaid Diagram - Flow Diagram */
 
 /*endregion Mermaid Diagram */
+
+
+
+
+
+
+
+
+pre[data-role="codeBlock"] {
+
+    &[class~="language-csharp"] {
+            
+        // &.class-name > .keyword {
+        //     color: #46AF99;
+        // }
+
+        // .token {
+        //     tab-size: 1 !important;
+        // }
+
+        //  &.arrow {
+
+        //}
+
+        .keyword {
+            color: @token-keyword;
+        }
+
+        .comment, .prolog, .doctype, .cdata {
+            color: @token-comment;
+            font-style: italic;
+        }
+
+        .string {
+            color: @token-string;
+        }
+
+        .number {
+            color: @token-number;
+        }
+
+        .unit {
+            color: @token-number;
+        }
+
+
+        .operator {
+            color: #B2B2B2;
+            // background-color: transparent;
+        }
+
+        .punctuation {
+            color: @token-punctuation;
+        }
+
+        .color {
+            color: @token-string;
+        }
+
+
+        .class-name {
+            color: @token-class;
+        }
+        
+        .generic.class-name {
+            color: #B8D7A3
+        }
+
+        .property-access{
+            // color: @token-string;
+            color: @token-property;
+        }
+
+        .method {
+            color: @token-method;
+        }
+
+        .function {
+            color: @token-function;
+        }
+
+        // &.function {
+        //     color: #46AF99;
+        // }
+
+        // &.variable {
+        //     color: #4EC9B0;
+        // }
+
+
+        //  &.keyword, 
+        // &.control-flow {
+        //     @token-controlflow: #DD4A68;
+        //     color: @token-controlflow;
+        // }
+
+        // &.dom {
+        //     @token-dom: #e90;
+        //     color: @token-dom;
+        // }
+
+        .tag > .punctuation {
+            color: @token-comment;
+        }
+
+        .property {
+            color: @token-property;
+        }
+
+        .selector {
+            color: @token-selector;
+        }
+
+        .boolean {
+            color: @token-boolean;
+        }
+
+
+        .attr-name {
+            color: @token-attrname;
+        }
+
+        .attr-value {
+            color: @token-attrvalue;
+        }
+
+
+        .interpolation {
+            & > .punctuation{
+                color: @token-punctuation;
+            }
+
+            // & > .expression{
+            //     color: @token-property;
+            // }
+        }
+
+
+        // &.url {
+        //   color: @token-keyword;
+        // }
+
+    }
+
+    &[class="language-javascript"] {
+        
+// &.class-name > .keyword {
+        //     color: #46AF99;
+        // }
+
+        // .token {
+        //     tab-size: 1 !important;
+        // }
+
+        //  &.arrow {
+
+        //}
+
+        .keyword {
+            color: @token-keyword;
+        }
+
+        .comment, .prolog, .doctype, .cdata {
+            color: @token-comment;
+            font-style: italic;
+        }
+
+        .string {
+            color: @token-string;
+        }
+
+        .number {
+            color: @token-number;
+        }
+
+        .unit {
+            color: @token-number;
+        }
+
+
+        .operator {
+            color: #B2B2B2;
+            // background-color: transparent;
+        }
+
+        .punctuation {
+            color: @token-punctuation;
+        }
+
+        .color {
+            color: @token-string;
+        }
+
+
+        .class-name {
+            color: @token-class;
+        }
+        
+        .generic.class-name {
+            color: #B8D7A3
+        }
+        
+        .method {
+            color: @token-method;
+        }
+
+        .function {
+            color: @token-function;
+        }
+
+        .property-access{
+            // color: @token-string;
+            // color: @token-property;
+            color: inherit;
+        }
+
+        // &.function {
+        //     color: #46AF99;
+        // }
+
+        // &.variable {
+        //     color: #4EC9B0;
+        // }
+
+
+        //  &.keyword, 
+        // &.control-flow {
+        //     @token-controlflow: #DD4A68;
+        //     color: @token-controlflow;
+        // }
+
+
+
+        // &.dom {
+        //     @token-dom: #e90;
+        //     color: @token-dom;
+        // }
+
+        
+        .property {
+            color: @token-property;
+        }
+
+        .selector {
+            color: @token-selector;
+        }
+
+        .boolean {
+            color: @token-boolean;
+        }
+
+
+        .attr-name {
+            color: @token-attrname;
+        }
+
+        .attr-value {
+            color: @token-attrvalue;
+        }
+
+
+        // &.url {
+        //   color: @token-keyword;
+        // }
+    }
+
+
+    &[class="language-sql"] {
+        
+        // &.class-name > .keyword {
+        //     color: #46AF99;
+        // }
+
+        // .token {
+        //     tab-size: 1 !important;
+        // }
+
+        //  &.arrow {
+
+        //}
+
+        .keyword {
+            color: @token-keyword;
+        }
+
+        .comment, .prolog, .doctype, .cdata {
+            color: @token-comment;
+            font-style: italic;
+        }
+
+        .string {
+            color: @token-string;
+        }
+
+        .number {
+            color: @token-number;
+        }
+
+        .unit {
+            color: @token-number;
+        }
+
+
+        .operator {
+            color: #B2B2B2;
+            // background-color: transparent;
+        }
+
+        .punctuation {
+            color: @token-punctuation;
+        }
+
+        .color {
+            color: @token-string;
+        }
+
+
+        .class-name {
+            color: @token-class;
+        }
+        
+        .generic.class-name {
+            color: #B8D7A3
+        }
+
+
+        .method {
+            color: @token-method;
+        }
+
+        .function {
+            color: @token-function;
+        }
+
+        .property-access{
+            // color: @token-string;
+            // color: @token-property;
+            color: inherit;
+        }
+
+        .variable {
+            // color: #4EC9B0;
+            color: @token-property;
+        }
+
+
+        //  &.keyword, 
+        // &.control-flow {
+        //     @token-controlflow: #DD4A68;
+        //     color: @token-controlflow;
+        // }
+
+        // &.dom {
+        //     @token-dom: #e90;
+        //     color: @token-dom;
+        // }
+
+        
+        .property {
+            color: @token-property;
+        }
+
+        .selector {
+            color: @token-selector;
+        }
+
+        .boolean {
+            color: @token-boolean;
+        }
+
+
+        .attr-name {
+            color: @token-attrname;
+        }
+
+        .attr-value {
+            color: @token-attrvalue;
+        }
+
+
+        // &.url {
+        //   color: @token-keyword;
+        // }
+    }
+
+
+    &[class="language-less"] {
+        
+        // &.class-name > .keyword {
+        //     color: #46AF99;
+        // }
+
+        // .token {
+        //     tab-size: 1 !important;
+        // }
+
+        //  &.arrow {
+
+        //}
+
+        .keyword {
+            color: @token-keyword;
+        }
+
+        .comment, .prolog, .doctype, .cdata {
+            color: @token-comment;
+            font-style: italic;
+        }
+
+        .string {
+            color: @token-string;
+        }
+
+        .number {
+            color: @token-number;
+        }
+
+        .unit {
+            color: @token-number;
+        }
+
+
+        .operator {
+            color: #B2B2B2;
+            // background-color: transparent;
+        }
+
+        .punctuation {
+            color: @token-punctuation;
+        }
+
+        .color {
+            // color: @token-string;
+            color: @general-font-color;
+
+            & > .function {
+                // @token-method: #DD4A68;
+                // color: @token-method;
+                color: @general-font-color;
+            }
+        }
+
+
+        // .class-name {
+        //     color: @token-class;
+        // }
+        
+        // .generic.class-name {
+        //     color: #B8D7A3
+        // }
+
+        
+
+        // .method {
+        //     // @token-method: #DD4A68;
+        //     // color: @token-method;
+        //     color: #D3FA7E;
+        // }
+
+        .function {
+            // @token-method: #DD4A68;
+            // color: @token-method;
+            color: @general-font-color;
+        }
+        
+        
+        .property-access{
+            // color: @token-string;
+            // color: @token-property;
+            color: @general-font-color;
+        }
+
+        // &.function {
+        //     color: #46AF99;
+        // }
+
+      
+        .variable {
+            // color: #4EC9B0;
+            color: @token-property;
+        }
+
+
+        //  &.keyword, 
+        // &.control-flow {
+        //     @token-controlflow: #DD4A68;
+        //     color: @token-controlflow;
+        // }
+
+
+
+        // &.dom {
+        //     @token-dom: #e90;
+        //     color: @token-dom;
+        // }
+
+        
+        .property {
+            color: @token-property;
+        }
+
+        .selector {
+            color: @token-selector;
+        }
+
+        .boolean {
+            color: @token-boolean;
+        }
+
+
+        .attr-name {
+            color: @token-attrname;
+        }
+
+        .attr-value {
+            color: @token-attrvalue;
+        }
+
+
+        // &.url {
+        //   color: @token-keyword;
+        // }
+    }
+
+    &[class="language-html"] {
+        
+        // &.class-name > .keyword {
+        //     color: #46AF99;
+        // }
+
+        // .token {
+        //     tab-size: 1 !important;
+        // }
+
+        //  &.arrow {
+
+        //}
+
+        .id {
+            color: @token-selector;
+        }
+
+        .tag {
+            color: @token-keyword;
+
+            & > .attr-name {
+                color: @token-attrvalue;
+
+                & > .namespace {
+                    color: @token-attrvalue;
+                }
+            }
+    
+
+            & > .attr-value {
+                color: @token-attrname;
+            }
+
+            
+            // & > .attr-value {
+            //     color: @token-string;
+            // }
+        }
+
+        .keyword {
+            color: @token-keyword;
+        }
+
+        .comment, .prolog, .doctype, .cdata {
+            color: @token-comment;
+            font-style: italic;
+        }
+
+        .string {
+            color: @token-string;
+        }
+
+        .number {
+            color: @token-number;
+        }
+
+        .unit {
+            color: @token-number;
+        }
+
+
+        .operator {
+            color: #B2B2B2;
+        }
+
+        .punctuation {
+            color: @token-punctuation;
+        }
+
+        .color {
+            // color: @token-string;
+            color: @general-font-color;
+
+            & > .function {
+                // @token-method: #DD4A68;
+                // color: @token-method;
+                color: @general-font-color;
+            }
+        }
+
+
+        // .class-name {
+        //     color: @token-class;
+        // }
+        
+        // .generic.class-name {
+        //     color: #B8D7A3
+        // }
+
+        
+
+        // .method {
+        //     // @token-method: #DD4A68;
+        //     // color: @token-method;
+        //     color: #D3FA7E;
+        // }
+
+        .function {
+            // @token-method: #DD4A68;
+            // color: @token-method;
+            color: @general-font-color;
+        }
+        
+        
+        .property-access{
+            // color: @token-string;
+            // color: @token-property;
+            color: @general-font-color;
+        }
+
+        // &.function {
+        //     color: #46AF99;
+        // }
+
+      
+        .variable {
+            // color: #4EC9B0;
+            color: @token-property;
+        }
+
+
+        //  &.keyword, 
+        // &.control-flow {
+        //     @token-controlflow: #DD4A68;
+        //     color: @token-controlflow;
+        // }
+
+
+
+        // &.dom {
+        //     @token-dom: #e90;
+        //     color: @token-dom;
+        // }
+
+        .dom.variable {
+            color: @general-font-color
+        }
+
+        .property {
+            color: @token-property;
+        }
+
+        .selector {
+            color: @token-selector;
+
+            & > .class {
+                color: @token-selector;
+            }
+        }
+
+        .pseudo-class, .important, .rule {
+            color: @token-keyword;
+        }
+
+        .pseudo-element {
+            color: @token-selector;
+        }
+
+        .boolean {
+            color: @token-boolean;
+        }
+
+
+        .attr-name {
+            color: @token-attrname;
+        }
+
+        .attr-value {
+            color: @token-attrvalue;
+        }
+
+
+        // .url {
+        //   color: @token-keyword;
+        // }
+    }
+}
