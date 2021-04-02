@@ -25,6 +25,9 @@
 @token-selector:        #D7BA7D;
 @token-boolean:         @token-keyword;
 @token-class:           #4EC9B0;
+@token-genericclass:    #B8D7A3;
+@token-method:          @general-font-color;
+@token-function:        @general-font-color;
 @token-method:          #FFFF9F;
 @token-function:        #FFFF9F;
 
@@ -868,23 +871,31 @@ html body[for="html-export"]:not([data-presentation-mode]) {
 
 /*region Mermaid Diagram - Entity Diagram */
 
-// .entityBox {
-    
-// }
+.entityBox {
+    fill: @background-body !important;
+    color: @general-font-color !important;
+}
 
 .entityLabel {
     font-size: calc(@general-font-size + 0.1rem) !important;
+    color: @general-font-color !important;
+    fill: @general-font-color !important;
 }
 
 
 .relationshipLabelBox {
     opacity: .85 !important;
     fill: @background-general !important;
+    // color: @general-font-color !important;
     background-color: @background-general !important;
 }
 
 .relationshipLabel {
     font-size: @general-font-size !important;
+    // fill: @background-general !important;
+    fill: @general-font-color !important;
+    // opacity: .68;
+    // color: @general-font-color !important;
 }
 
 
@@ -896,6 +907,8 @@ html body[for="html-export"]:not([data-presentation-mode]) {
 
     div {
         font-size: calc(@general-font-size + 0.1rem) !important;
+        color: @general-font-color !important;
+        fill: @general-font-color !important;
     }
 }
 
@@ -905,6 +918,9 @@ html body[for="html-export"]:not([data-presentation-mode]) {
 
     & * {
         font-size: @general-font-size !important;
+        color: @general-font-color !important;
+        fill: @general-font-color !important;
+        // opacity: .68;
     }
 
 }
@@ -915,6 +931,10 @@ html body[for="html-export"]:not([data-presentation-mode]) {
     background-color: @background-general !important;
     fill: @background-general !important;
     border: 2px solid red !important;
+}
+
+.label-container {
+    fill: @background-body !important;
 }
 
 /*endregion Mermaid Diagram - Flow Diagram */
@@ -985,7 +1005,7 @@ pre[data-role="codeBlock"] {
         }
         
         .generic.class-name {
-            color: #B8D7A3
+            color: @token-genericclass;
         }
 
         .property-access{
