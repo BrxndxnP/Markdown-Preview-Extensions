@@ -13,6 +13,8 @@
 // @code-header-size:      calc(@code-top-size * 2.5);
 // @code-header-size:      calc(.8rem * 2.5);
 
+@diagram-node-background: darken(@background-general, 5%);
+
 @code-highlight-color:  linear-gradient(to right, hsla(0 , 0%, 95%, 0.15) 50%, hsla(0 , 0%, 95%, 0));
 
 //  TOKENS
@@ -867,35 +869,37 @@ html body[for="html-export"]:not([data-presentation-mode]) {
 
 
 
+
 /*region Mermaid Diagram */
 
 /*region Mermaid Diagram - Entity Diagram */
 
 .entityBox {
-    fill: @background-body !important;
-    color: @general-font-color !important;
+    // fill: @background-body !important;
+    // color: @general-font-color !important;
+
+    // background-color: @diagram-node-background !important;
+    fill: @diagram-node-background !important;
 }
 
 .entityLabel {
     font-size: calc(@general-font-size + 0.1rem) !important;
     color: @general-font-color !important;
     fill: @general-font-color !important;
+
+
 }
 
 
 .relationshipLabelBox {
     opacity: .85 !important;
     fill: @background-general !important;
-    // color: @general-font-color !important;
     background-color: @background-general !important;
 }
 
 .relationshipLabel {
     font-size: @general-font-size !important;
-    // fill: @background-general !important;
     fill: @general-font-color !important;
-    // opacity: .68;
-    // color: @general-font-color !important;
 }
 
 
@@ -920,11 +924,9 @@ html body[for="html-export"]:not([data-presentation-mode]) {
         font-size: @general-font-size !important;
         color: @general-font-color !important;
         fill: @general-font-color !important;
-        // opacity: .68;
     }
 
 }
-
 
 .edgeLabel rect {
     opacity: .85 !important;
@@ -933,13 +935,16 @@ html body[for="html-export"]:not([data-presentation-mode]) {
     border: 2px solid red !important;
 }
 
-.label-container {
-    fill: @background-body !important;
+.label-container {    
+    fill: @diagram-node-background !important;
+
 }
 
 /*endregion Mermaid Diagram - Flow Diagram */
 
 /*endregion Mermaid Diagram */
+
+
 
 
 
