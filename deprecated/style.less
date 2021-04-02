@@ -1,3 +1,10 @@
+
+// @import "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/styles/dark.less";
+// @import "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/styles/light.less";
+
+// @import "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/styles/style.less";
+
+
 // @dark-mode: false;
 @dark-mode: true;
 
@@ -69,11 +76,11 @@
 
     
 
-    // @code-button-color: transparent;
-    // @svg-fill: if(@dark-mode = true, white, black);
+    @code-button-color: transparent;
+    @svg-fill: if(@dark-mode = true, white, black);
 
     @code-expandless-icon: 'https://fonts.gstatic.com/s/i/materialicons/expand_less/v10/24px.svg';
-    @code-expand-icon: 'https://fonts.gstatic.com/s/i/materialicons/expand_more/v12/24px.svg';
+    @code-expandmore-icon: 'https://fonts.gstatic.com/s/i/materialicons/expand_more/v12/24px.svg';
 
 /*#endregion Code Block Palette */
 
@@ -913,12 +920,11 @@ html body[for="html-export"]:not([data-presentation-mode]) {
         display: block;
         left: 0px;
         content: '';
-        -webkit-mask: url(@code-expand-icon) no-repeat 0% 0%;
-        mask: url(@code-expand-icon) no-repeat 0% 0%;
+        -webkit-mask: url(@code-expandmore-icon) no-repeat 0% 0%;
+        mask: url(@code-expandmore-icon) no-repeat 0% 0%;
         -webkit-mask-size: cover;
         mask-size: cover;
-        background-color: @general-font-color;
-        // background-color: @svg-fill;
+        background-color: @svg-fill;
         transition-duration: 0.35s;
         transition-timing-function: ease-out;
     }

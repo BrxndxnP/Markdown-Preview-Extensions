@@ -1,8 +1,10 @@
 module.exports = {
   onWillParseMarkdown: function (markdown) {
     return new Promise((resolve, reject) => {
+
       var urls = [
-        "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/markdown-preview-extension.js",
+        "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/scripts/toc.js",
+        "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/scripts/codeblock.js",
       ];
 
       for (let i = 0; i < urls.length; i++) {
