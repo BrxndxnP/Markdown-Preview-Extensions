@@ -839,3 +839,62 @@ html body[for="html-export"]:not([data-presentation-mode]) {
         transition-timing-function: ease-out;
     }
 }
+
+
+
+/*region Mermaid Diagram */
+
+/*region Mermaid Diagram - Entity Diagram */
+
+// .entityBox {
+    
+// }
+
+.entityLabel {
+    font-size: calc(@general-font-size + 0.1rem) !important;
+}
+
+
+.relationshipLabelBox {
+    opacity: .85 !important;
+    fill: @background-general !important;
+    background-color: @background-general !important;
+}
+
+.relationshipLabel {
+    font-size: @general-font-size !important;
+}
+
+
+/*endregion Mermaid Diagram - Entity Diagram */
+
+/*region Mermaid Diagram - Flow Diagram */
+
+.node {
+
+    div {
+        font-size: calc(@general-font-size + 0.1rem) !important;
+    }
+}
+
+
+.edgeLabel {
+    background-color: transparent !important;
+
+    & * {
+        font-size: @general-font-size !important;
+    }
+
+}
+
+
+.edgeLabel rect {
+    opacity: .85 !important;
+    background-color: @background-general !important;
+    fill: @background-general !important;
+    border: 2px solid red !important;
+}
+
+/*endregion Mermaid Diagram - Flow Diagram */
+
+/*endregion Mermaid Diagram */
