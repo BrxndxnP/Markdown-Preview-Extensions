@@ -24,7 +24,13 @@
 @token-punctuation:     #030303;
 @token-selector:        #887243;
 @token-boolean:         @token-keyword;
-@token-class:           @token-keyword;
+// @token-class:           @token-keyword;
+// @token-class:           #4EC9B0;
+@token-class:           #36B58A;
+
+@token-attrname:       @token-keyword;
+@token-attrvalue:      @token-property;
+
 
 // @code-expandless-icon: 'https://fonts.gstatic.com/s/i/materialicons/expand_less/v10/24px.svg';
 @code-expand-icon: 'https://fonts.gstatic.com/s/i/materialicons/expand_more/v12/24px.svg';
@@ -440,9 +446,13 @@ html, body {
         }
 
 
-        // &.class-name {
-        //     color: @token-class;
-        // }
+        &.class-name {
+            color: @token-class;
+        }
+        
+        &.generic.class-name {
+            color: #B8D7A3
+        }
 
         &.property-access{
             // color: @token-string;
@@ -489,6 +499,15 @@ html, body {
 
         &.boolean {
             color: @token-boolean;
+        }
+
+
+        &.attr-name {
+            color: @token-attrname;
+        }
+
+        &.attr-value {
+            color: @token-attrvalue;
         }
 
 
