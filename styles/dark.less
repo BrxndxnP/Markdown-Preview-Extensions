@@ -1653,4 +1653,146 @@ pre[data-role="codeBlock"] {
         //   color: @token-keyword;
         // }
     }
+
+
+    &[class~="language-json"] {
+            
+        // &.class-name > .keyword {
+        //     color: #46AF99;
+        // }
+
+        // .token {
+        //     tab-size: 1 !important;
+        // }
+
+        //  &.arrow {
+
+        //}
+
+        .keyword {
+            color: @token-keyword;
+        }
+
+        .comment, .prolog, .doctype, .cdata {
+            color: @token-comment;
+            font-style: italic;
+        }
+
+        .string {
+            color: @token-string;
+        }
+
+        .number {
+            color: @token-number;
+        }
+
+        .unit {
+            color: @token-number;
+        }
+
+
+        .operator {
+            color: #B2B2B2;
+            // background-color: transparent;
+        }
+
+        .tag {
+            color: @token-keyword;
+
+            & > .punctuation {
+                // color: @token-comment;
+                // color: @token-punctuation;
+                color: #B2B2B2;
+            }
+        }
+
+        .punctuation {
+            color: @token-punctuation;
+        }
+
+        .color {
+            color: @token-string;
+        }
+
+
+        .class-name {
+            color: @token-class;
+        }
+        
+        .generic.class-name {
+            color: @token-genericclass;
+        }
+
+        .property-access{
+            // color: @token-string;
+            color: @token-property;
+        }
+
+        .method {
+            color: @token-method;
+        }
+
+        .function {
+            color: @token-function;
+        }
+
+        // &.function {
+        //     color: #46AF99;
+        // }
+
+        // &.variable {
+        //     color: #4EC9B0;
+        // }
+
+
+        //  &.keyword, 
+        // &.control-flow {
+        //     @token-controlflow: #DD4A68;
+        //     color: @token-controlflow;
+        // }
+
+        // &.dom {
+        //     @token-dom: #e90;
+        //     color: @token-dom;
+        // }
+
+      
+        .property {
+            color: @token-property;
+        }
+
+        .selector {
+            color: @token-selector;
+        }
+
+        .boolean {
+            color: @token-boolean;
+        }
+
+
+        .attr-name {
+            color: @token-attrname;
+        }
+
+        .attr-value {
+            color: @token-attrvalue;
+        }
+
+
+        .interpolation {
+            & > .punctuation{
+                color: @token-punctuation;
+            }
+
+            // & > .expression{
+            //     color: @token-property;
+            // }
+        }
+
+
+        // &.url {
+        //   color: @token-keyword;
+        // }
+
+    }
 }
