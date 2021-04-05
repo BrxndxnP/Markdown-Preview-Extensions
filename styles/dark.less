@@ -1066,7 +1066,29 @@ g.classGroup line{
 
 
 
+.slide {
+    top: 0px;
+    height: 100%;
 
+    // top: 0px !important;
+    // height: 100% !important;
+
+    code {
+        // border-radius: 3px !important;
+        border-radius: 3px;
+        
+        &::before {
+            letter-spacing: -0.2em;
+            content: "\00a0";
+        }
+
+        &::after {
+            letter-spacing: -0.2em;
+            content: "\00a0";
+        }
+
+    }
+}
 
 
 
