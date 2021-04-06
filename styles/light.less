@@ -924,6 +924,14 @@ g.classGroup line{
 
 /*#region Code Blocks */
 
+.markdown-preview.markdown-preview code {
+    // font-size: @general-font-size !important;
+    color: @code-text-color;
+    // background-color: @background-body;
+    background-color: darken(@background-general, 5%);
+    letter-spacing: 0px;
+}
+
 // Base
 pre[data-role="codeBlock"] {
     font-size: @general-font-size !important;
@@ -1002,6 +1010,7 @@ pre[data-role="codeBlock"] {
         font-size: @general-font-size !important;
         letter-spacing: 0px;
         color: @general-font-color;
+        background-color: transparent !important;
     }
 
     & .line-numbers-rows {
@@ -1107,13 +1116,7 @@ pre[data-role="codeBlock"] {
 
 }
 
-.markdown-preview.markdown-preview code {
-    // font-size: @general-font-size !important;
-    color: @code-text-color;
-    // background-color: @background-body;
-    background-color: darken(@background-general, 5%);
-    letter-spacing: 0px;
-}
+
 
 
 // CSharp
@@ -1298,6 +1301,18 @@ pre[data-role="codeBlock"][class~="language-json"] {
     //         color: @token-punctuation;
     //     }
     // }
+}
+
+
+// YAML
+pre[data-role="codeBlock"][class~="language-yaml"] {
+    .key.atrule {
+        color: @token-keyword;
+    }
+
+    .null {
+        color: @token-keyword;
+    }
 }
 
 

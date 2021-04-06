@@ -1,0 +1,2695 @@
+<!DOCTYPE html><html><head>
+      <title>Markdown Notes</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\bphommathep.TOTALMM\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.17\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\bphommathep.TOTALMM\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.17\node_modules\@shd101wyy\mume\dependencies\js-sequence-diagrams\sequence-diagram-min.css">
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\bphommathep.TOTALMM\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.17\node_modules\@shd101wyy\mume\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\bphommathep.TOTALMM\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.17\node_modules\@shd101wyy\mume\dependencies\webfont\webfontloader.js" charset="UTF-8"></script><script type="text/javascript" src="file:///c:\Users\bphommathep.TOTALMM\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.17\node_modules\@shd101wyy\mume\dependencies\raphael\raphael.js" charset="UTF-8"></script><script type="text/javascript" src="file:///c:\Users\bphommathep.TOTALMM\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.17\node_modules\@shd101wyy\mume\dependencies\underscore\underscore.js" charset="UTF-8"></script><script type="text/javascript" src="file:///c:\Users\bphommathep.TOTALMM\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.17\node_modules\@shd101wyy\mume\dependencies\js-sequence-diagrams\sequence-diagram-min.js" charset="UTF-8"></script>
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/*  Themes
+
+Dark Theme
+@import "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/styles/dark.less";
+
+Light Theme
+@import "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/styles/light.less";
+
+*/
+/*#region Code Block Palette */
+/*#endregion Code Block Palette */
+/*#region Theme */
+@font-face {
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css?family=Roboto");
+}
+/*#endregion Theme */
+/*#region Markdown Body */
+html,
+body {
+  background-color: #292929 !important;
+  overflow-x: hidden;
+}
+.markdown-preview.markdown-preview {
+  background-color: #292929;
+}
+.markdown-preview.markdown-preview p {
+  font-size: 0.85rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  color: #D4D4D4;
+}
+.markdown-preview.markdown-preview strong {
+  color: inherit;
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3,
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5,
+.markdown-preview.markdown-preview h6 {
+  margin-top: 1em;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.markdown-preview.markdown-preview h1 {
+  color: #EDEDED;
+  font-size: calc(0.85rem + 1rem);
+  margin-bottom: 16px;
+  border-bottom: thin solid #474747;
+}
+.markdown-preview.markdown-preview h2 {
+  color: #ffffff;
+  font-size: calc(0.85rem + 0.7rem);
+}
+.markdown-preview.markdown-preview h3 {
+  color: #ffffff;
+  font-size: calc(0.85rem + 0.45rem);
+}
+.markdown-preview.markdown-preview h4 {
+  color: #ffffff;
+  font-size: calc(0.85rem + 0.35rem);
+}
+.markdown-preview.markdown-preview h5 {
+  color: #ffffff;
+  font-size: calc(0.85rem + 0.2rem);
+}
+.markdown-preview.markdown-preview h6 {
+  color: #ffffff;
+  font-size: calc(0.85rem + 0.1rem);
+}
+.markdown-preview.markdown-preview li {
+  font-size: 0.85rem;
+  color: #D4D4D4;
+}
+.markdown-preview.markdown-preview td {
+  color: #D4D4D4;
+  font-size: 0.85rem;
+  border: 1px solid #696969;
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+}
+.markdown-preview.markdown-preview th {
+  color: #EDEDED;
+  font-size: 0.85rem;
+  border: 1px solid #474747;
+  border-top-width: 0px;
+  border-bottom-width: 1px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+}
+.markdown-preview.markdown-preview .slide {
+  top: 0px;
+  height: 100%;
+}
+.markdown-preview.markdown-preview .slide code {
+  border-radius: 3px;
+}
+.markdown-preview.markdown-preview .slide code::before {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview.markdown-preview .slide code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview.markdown-preview .slide hr {
+  height: 0px !important;
+}
+.markdown-preview.markdown-preview .slide pre {
+  text-shadow: none;
+  width: inherit;
+}
+.markdown-preview.markdown-preview a {
+  text-decoration: none;
+  transition: 1s;
+}
+.markdown-preview.markdown-preview a:hover {
+  text-decoration: underline;
+  text-decoration-color: turquoise;
+  transition: 1s;
+}
+.markdown-preview.markdown-preview hr {
+  margin: 20px 0;
+  height: 2px;
+  background-color: #474747;
+}
+/*#endregion Markdown Body */
+/*#region ToC */
+.md-sidebar-toc ul li a {
+  color: #D4D4D4;
+  font-size: 0.85rem;
+  font-weight: 400;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.md-sidebar-toc ul li a:hover {
+  color: #EDEDED;
+  text-decoration: underline;
+  text-decoration-color: #42b983;
+}
+.md-sidebar-toc ul li a strong {
+  color: inherit;
+}
+html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn {
+  position: fixed;
+  top: 0px;
+  left: 12px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #42b983;
+  background: transparent;
+  z-index: 99;
+  width: 32px;
+  text-align: left;
+  height: 30px;
+  transition: 0.25s;
+}
+html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn:hover {
+  opacity: 0.68;
+  transition: 0.5s;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+  transition: 0.65s;
+  left: 400px;
+  padding: 2em;
+  width: calc(100% - 400px);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 40px 0 48px 0;
+  font-size: 14px;
+  overflow-x: hidden;
+  width: 400px;
+  background: linear-gradient(to top, #161616 0%, rgba(11, 11, 11, 0.68) 10%, rgba(7, 7, 7, 0.23) 50%, transparent) bottom #1c1c1c no-repeat;
+  background-size: 100% 35px;
+  animation: slide-in 0.5s forwards !important;
+  -webkit-animation: slide-in 0.5s forwards !important;
+}
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  transition: 0.5s;
+  padding: 2em 8em;
+  left: cal(914px);
+  width: 100%;
+}
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  padding: 40px 0 48px 0;
+  font-size: 14px;
+  overflow-x: hidden;
+  display: block;
+  background-color: #161616;
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc ul,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc li {
+  list-style-type: none;
+  margin-top: 0.8em;
+}
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc ul {
+  padding: 0 1.6em;
+}
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+/*#endregion ToC */
+/*#region Custom Classes */
+.toc-active-link {
+  color: #42B883 !important;
+  border-bottom: 1px solid turquoise !important;
+  transition: 0.5s;
+}
+.code-container {
+  display: block;
+  font-size: 0.85rem !important;
+  background-color: #161616;
+  color: #D4D4D4;
+  position: relative;
+  border: thin solid #3F3E3E;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+.code-container[code-collapsed=true] > *:not(button) {
+  visibility: hidden;
+  transition: all 0.6s;
+}
+.code-container:not([code-collapsed=true]) *:not(button) {
+  visibility: visible;
+}
+.code-container:not([code-collapsed=true]) > .code-button::after {
+  transform: rotate(180deg);
+}
+.code-container::before {
+  content: attr(code-language);
+  position: absolute;
+  top: calc(0.8rem / 2);
+  padding-right: calc(0.8rem / 5);
+  padding-left: calc(0.8rem / 5);
+  opacity: 0.68;
+  font-size: 0.8rem;
+  z-index: 3;
+  left: 40px;
+}
+.code-button {
+  z-index: 2;
+  content: attr(code-language);
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: calc(0.8rem * 2.5);
+  width: 100%;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  background-color: #1c1c1c;
+  color: #ecf0f1;
+  transition: background-color 0.3s;
+}
+.code-button:hover {
+  background-color: #232323;
+}
+.code-button span {
+  display: block;
+  padding: 12px 24px;
+}
+.code-button::after {
+  width: calc(0.8rem * 2);
+  height: calc(0.8rem * 2);
+  display: block;
+  left: 0px;
+  content: '';
+  -webkit-mask: url('https://fonts.gstatic.com/s/i/materialicons/expand_more/v12/24px.svg') no-repeat 0% 0%;
+  mask: url('https://fonts.gstatic.com/s/i/materialicons/expand_more/v12/24px.svg') no-repeat 0% 0%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #D4D4D4;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-out;
+}
+/*#endregion Custom Classes */
+/*#region Mermaid Diagram */
+/*#region Mermaid Diagram - Class Diagram */
+g.classGroup text {
+  font-size: 0.85rem !important;
+  fill: #D4D4D4 !important;
+  transform: translate(0px, 1%);
+}
+g.classGroup line {
+  fill: red !important;
+}
+.classLabel .label {
+  font-size: 0.85rem !important;
+  fill: #D4D4D4 !important;
+}
+/*#endregion Mermaid Diagram - Class Diagram */
+/*#region Mermaid Diagram - Entity Diagram */
+.entityBox {
+  fill: #1c1c1c !important;
+}
+.entityLabel {
+  font-size: calc(0.85rem + 0.1rem) !important;
+  color: #D4D4D4 !important;
+  fill: #D4D4D4 !important;
+}
+.relationshipLabelBox {
+  opacity: 0.85 !important;
+  fill: #292929 !important;
+  background-color: #292929 !important;
+}
+.relationshipLabel {
+  font-size: 0.85rem !important;
+  fill: #D4D4D4 !important;
+}
+.attributeBoxOdd {
+  fill: #232323 !important;
+}
+.attributeBoxEven {
+  fill: #232323 !important;
+}
+/*#endregion Mermaid Diagram - Entity Diagram */
+/*#region Mermaid Diagram - Flow Diagram */
+.node div {
+  font-size: calc(0.85rem + 0.1rem) !important;
+  color: #D4D4D4 !important;
+  fill: #D4D4D4 !important;
+}
+.edgeLabel {
+  background-color: transparent !important;
+}
+.edgeLabel * {
+  font-size: 0.85rem !important;
+  color: #D4D4D4 !important;
+  fill: #D4D4D4 !important;
+}
+.edgeLabel rect {
+  opacity: 0.85 !important;
+  background-color: #292929 !important;
+  fill: #292929 !important;
+  border: 2px solid red !important;
+}
+.label-container {
+  fill: #1c1c1c !important;
+}
+/*#endregion Mermaid Diagram - Flow Diagram */
+/*#endregion Mermaid Diagram */
+/*#region Code Blocks */
+.markdown-preview.markdown-preview code {
+  color: #D1D1D1;
+  background-color: #1c1c1c;
+  letter-spacing: 0px;
+}
+pre[data-role="codeBlock"] {
+  font-size: 0.85rem !important;
+  background-color: #161616;
+  color: #D4D4D4;
+  position: relative;
+  max-height: 500px;
+  overflow-y: auto;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+pre[data-role="codeBlock"][code-collapsed=true] {
+  max-height: calc(0.8rem * 2.5);
+  overflow-y: hidden;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition: all 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+  visibility: hidden;
+}
+pre[data-role="codeBlock"]:not([code-collapsed=true]) {
+  padding-top: calc(0.8rem * 3);
+  transition: all 0.5s;
+  visibility: visible;
+  animation: hide-scroll 0.5s backwards;
+}
+@keyframes hide-scroll {
+  from,
+  to {
+    overflow: hidden;
+  }
+}
+pre[data-role="codeBlock"]:not([code-collapsed=true])::-webkit-scrollbar-thumb {
+  background-color: rgba(119, 118, 118, 0.493);
+  border: 4px solid rgba(119, 118, 118, 0.493);
+  background-clip: content-box;
+}
+pre[data-role="codeBlock"]:not([code-collapsed=true])::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  transition: all 1s;
+}
+pre[data-role="codeBlock"]:not([code-collapsed=true])::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+pre[data-role="codeBlock"]:not([code-collapsed=true])::-webkit-scrollbar-track:vertical {
+  margin-top: calc(0.8rem * 2);
+}
+pre[data-role="codeBlock"]:not([code-collapsed=true])::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+pre[data-role="codeBlock"]:not([code-collapsed=true])::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+pre[data-role="codeBlock"]:not([code-collapsed=true])::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+pre[data-role="codeBlock"] > span {
+  font-size: 0.85rem !important;
+  letter-spacing: 0px;
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"] > code {
+  font-size: 0.85rem !important;
+  letter-spacing: 0px;
+  color: #D4D4D4;
+  background-color: transparent !important;
+}
+pre[data-role="codeBlock"] .line-numbers-rows {
+  top: calc(0.8rem * 3) !important;
+}
+pre[data-role="codeBlock"][data-line] .line-highlight {
+  background: linear-gradient(to right, hsla(0, 0%, 95%, 0.15) 50%, hsla(0, 0%, 95%, 0));
+  margin-top: calc(0.8rem * 3) !important;
+}
+pre[data-role="codeBlock"][data-line] .line-highlight[data-end]:after {
+  content: none;
+}
+pre[data-role="codeBlock"][data-line] .line-highlight:before {
+  content: none;
+}
+pre[data-role="codeBlock"] .token {
+  background-color: transparent;
+}
+pre[data-role="codeBlock"] .keyword {
+  color: #5190C5;
+}
+pre[data-role="codeBlock"] .comment,
+pre[data-role="codeBlock"] .prolog,
+pre[data-role="codeBlock"] .doctype,
+pre[data-role="codeBlock"] .cdata {
+  color: #6A9955;
+  font-style: italic;
+}
+pre[data-role="codeBlock"] .string {
+  color: #CE9178;
+}
+pre[data-role="codeBlock"] .number {
+  color: #B8D7A3;
+}
+pre[data-role="codeBlock"] .unit {
+  color: #B8D7A3;
+}
+pre[data-role="codeBlock"] .color {
+  color: #CE9178;
+}
+pre[data-role="codeBlock"] .operator {
+  color: #B2B2B2;
+}
+pre[data-role="codeBlock"] .punctuation {
+  color: #BDBDBD;
+}
+pre[data-role="codeBlock"] .property {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"] .generic.class-name {
+  color: #B8D7A3;
+}
+pre[data-role="codeBlock"] .class-name {
+  color: #4EC9B0;
+}
+pre[data-role="codeBlock"] .boolean {
+  color: #5190C5;
+}
+pre[data-role="codeBlock"] .selector {
+  color: #D7BA7D;
+}
+pre[data-role="codeBlock"] .method {
+  color: #FFFF9F;
+}
+pre[data-role="codeBlock"] .function {
+  color: #FFFF9F;
+}
+pre[data-role="codeBlock"] .attr-name {
+  color: #C8C8C8;
+}
+pre[data-role="codeBlock"] .attr-value {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"] .tag {
+  color: #5190C5;
+}
+pre[data-role="codeBlock"] .tag > .punctuation {
+  color: #B2B2B2;
+}
+pre[data-role="codeBlock"][class~="language-csharp"] .tag {
+  color: #5190C5;
+}
+pre[data-role="codeBlock"][class~="language-csharp"] .tag > .punctuation {
+  color: #B2B2B2;
+}
+pre[data-role="codeBlock"][class~="language-csharp"] .property-access {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-javascript"] .property-access {
+  color: inherit;
+}
+pre[data-role="codeBlock"][class~="language-sql"] .unit {
+  color: #B8D7A3;
+}
+pre[data-role="codeBlock"][class~="language-sql"] .property-access {
+  color: inherit;
+}
+pre[data-role="codeBlock"][class~="language-sql"] .variable {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-scss"] .color {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-scss"] .color > .function {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-scss"] .function {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-scss"] .property-access {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-scss"] .variable {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-less"] .color {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-less"] .color > .function {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-less"] .function {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-less"] .property-access {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-less"] .variable {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-less"] .property {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-html"] .id {
+  color: #D7BA7D;
+}
+pre[data-role="codeBlock"][class~="language-html"] .tag {
+  color: #5190C5;
+}
+pre[data-role="codeBlock"][class~="language-html"] .tag > .attr-name {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-html"] .tag > .attr-name > .namespace {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-html"] .tag > .attr-value {
+  color: #C8C8C8;
+}
+pre[data-role="codeBlock"][class~="language-html"] .color {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-html"] .color > .function {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-html"] .function {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-html"] .property-access {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-html"] .variable {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-html"] .dom.variable {
+  color: #D4D4D4;
+}
+pre[data-role="codeBlock"][class~="language-html"] .selector {
+  color: #D7BA7D;
+}
+pre[data-role="codeBlock"][class~="language-html"] .selector > .class {
+  color: #D7BA7D;
+}
+pre[data-role="codeBlock"][class~="language-html"] .pseudo-class,
+pre[data-role="codeBlock"][class~="language-html"] .important,
+pre[data-role="codeBlock"][class~="language-html"] .rule {
+  color: #5190C5;
+}
+pre[data-role="codeBlock"][class~="language-html"] .pseudo-element {
+  color: #D7BA7D;
+}
+pre[data-role="codeBlock"][class~="language-json"] .tag {
+  color: #5190C5;
+}
+pre[data-role="codeBlock"][class~="language-json"] .tag > .punctuation {
+  color: #B2B2B2;
+}
+pre[data-role="codeBlock"][class~="language-json"] .property-access {
+  color: #9CDCFE;
+}
+pre[data-role="codeBlock"][class~="language-json"] .property {
+  color: #9CDCFE;
+}
+/*#endregion Code Blocks */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="vs-code-setup">VS Code Setup</h1>
+
+<h2 class="mume-header" id="vs-extensions">VS Extensions</h2>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shd101wyy.markdown-preview-enhanced</td>
+<td><a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/">Documentation</a></li>
+</ul>
+<h3 class="mume-header" id="front-matter">Front-Matter</h3>
+
+<p><a href="https://jekyllrb.com/docs/front-matter/">https://jekyllrb.com/docs/front-matter/</a></p>
+<h4 class="mume-header" id="yaml">YAML</h4>
+
+<p><a href="https://yaml.org/">https://yaml.org/</a></p>
+<h3 class="mume-header" id="side-table-of-contents">Side Table Of Contents</h3>
+
+<ol>
+<li>
+<p>Right click the gear next to the extension and click on &quot;<strong>Extension Settings</strong>&quot;.<br>
+<img src="assets\images\SettingSnippet_EditExtensionSetting.JPG?0.32592645517087426" alt></p>
+</li>
+<li>
+<p>Set the following setting to allow the side table of contents <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> :<br>
+<img src="assets\images\SettingSnippet_EnableScriptExecution.JPG?0.13051830508527407" alt></p>
+</li>
+<li>
+<p>Copy and paste this at the <strong>top</strong> of the markdown file:</p>
+<ul>
+<li>The title is the HTML title.</li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code>---
+title: &quot;HTML Title&quot;
+toc:
+    depth_from: 1
+    depth_to: 6
+    ordered: false
+    ignoreLink: true
+html:
+    embed_local_images: true
+    embed_svg: true
+    offline: true
+    toc: true
+---
+</code></pre></li>
+</ol>
+<hr>
+<h3 class="mume-header" id="css-styling">CSS Styling</h3>
+
+<ol>
+<li>Press <strong>CTRL</strong> + <strong>SHIFT</strong> + <strong>P</strong>.</li>
+<li>Type &quot;<strong>Customize CSS</strong>&quot;.<br>
+<img src="assets\images\SettingSnippet_CustomizeCSS.JPG?0.951464117310602" alt></li>
+</ol>
+<h3 class="mume-header" id="default-open-toc">Default Open TOC</h3>
+
+<p>Add the below snippet to have the side TOC start opened.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>    ```js {cmd hide}
+    document.getElementsByTagName(&apos;body&apos;)[0].setAttribute(&apos;html-show-sidebar-toc&apos;, true);
+    ```
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>    ```js {cmd hide}
+    window.onload = () =&gt; {
+        document.getElementsByTagName(&apos;body&apos;)[0].setAttribute(&apos;html-show-sidebar-toc&apos;, true);
+
+        var activelinkClassName = &apos;toc-active-link&apos;;
+        document.querySelectorAll(&apos;.md-sidebar-toc a&apos;)[0].classList.add(activelinkClassName);
+
+        window.onscroll = () =&gt; {
+            function getHeaderLinkId() {
+                var headers = document.querySelectorAll(&apos;h1, h2, h3, h4, h5, h6&apos;);
+
+                if (headers === undefined &amp;&amp; headers.length === 0)
+                    return;
+                    
+                // Bottom of the page =&gt; Use last link
+                if ((window.innerHeight + window.scrollY) &gt;= document.body.offsetHeight)
+                    return headers[headers.length - 1].id;
+                
+                for (let i = 0; i &lt; headers.length; i++) {
+                    var top = headers[i].getBoundingClientRect().top;
+                
+                    if (top &gt; 0) {
+                        if (top &lt; 10) {
+                            return headers[i].id;
+                        } else {
+                            return (headers[i - 1] !== undefined) ? 
+                                headers[i - 1].id : headers[i].id;
+                        }
+                    }
+                }
+            }
+            
+            function getActiveTOCLink(id){
+                var links = document.querySelectorAll(&apos;.md-sidebar-toc a&apos;);
+                for (let i = 0; i &lt; links.length; i++) {
+                    if (links[i].href.includes(id))
+                        return links[i];
+                }
+            }
+            
+            function resetLinks(){
+                var activelinks = document.querySelectorAll(&apos;.&apos; + activelinkClassName);
+                for (let i = 0; i &lt; activelinks.length; i++) {
+                    activelinks[i].classList.remove(activelinkClassName);
+                }
+            }
+            
+            var headerId = getHeaderLinkId();
+            if (headerId !== undefined) {
+                var tocElement = getActiveTOCLink(headerId)
+                
+                if (tocElement !== null &amp;&amp; tocElement !== undefined) {
+                    resetLinks();
+                    tocElement.classList.add(activelinkClassName);
+                }
+            }
+        }
+    }
+
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="presentation-mode">Presentation Mode</h3>
+
+<p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/presentation">https://shd101wyy.github.io/markdown-preview-enhanced/#/presentation</a></p>
+<h4 class="mume-header" id="settings">Settings</h4>
+
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">presentation</span><span class="token punctuation">:</span>
+    <span class="token comment"># presentation theme</span>
+    <span class="token comment"># === available themes ===</span>
+    <span class="token comment"># &quot;beige.css&quot;</span>
+    <span class="token comment"># &quot;black.css&quot;</span>
+    <span class="token comment"># &quot;blood.css&quot;</span>
+    <span class="token comment"># &quot;league.css&quot;</span>
+    <span class="token comment"># &quot;moon.css&quot;</span>
+    <span class="token comment"># &quot;night.css&quot;</span>
+    <span class="token comment"># &quot;serif.css&quot;</span>
+    <span class="token comment"># &quot;simple.css&quot;</span>
+    <span class="token comment"># &quot;sky.css&quot;</span>
+    <span class="token comment"># &quot;solarized.css&quot;</span>
+    <span class="token comment"># &quot;white.css&quot;</span>
+    <span class="token comment"># &quot;none.css&quot;</span>
+    <span class="token key atrule">theme</span><span class="token punctuation">:</span> white.css
+
+    <span class="token comment"># The &quot;normal&quot; size of the presentation, aspect ratio will be preserved</span>
+    <span class="token comment"># when the presentation is scaled to fit different resolutions. Can be</span>
+    <span class="token comment"># specified using percentage units.</span>
+    <span class="token key atrule">width</span><span class="token punctuation">:</span> <span class="token number">960</span>
+    <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">700</span>
+
+    <span class="token comment"># Factor of the display size that should remain empty around the content</span>
+    <span class="token key atrule">margin</span><span class="token punctuation">:</span> <span class="token number">0.1</span>
+
+    <span class="token comment"># Bounds for smallest/largest possible scale to apply to content</span>
+    <span class="token key atrule">minScale</span><span class="token punctuation">:</span> <span class="token number">0.2</span>
+    <span class="token key atrule">maxScale</span><span class="token punctuation">:</span> <span class="token number">1.5</span>
+
+    <span class="token comment"># Display controls in the bottom right corner</span>
+    <span class="token key atrule">controls</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Display a presentation progress bar</span>
+    <span class="token key atrule">progress</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Display the page number of the current slide</span>
+    <span class="token key atrule">slideNumber</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Push each slide change to the browser history</span>
+    <span class="token key atrule">history</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Enable keyboard shortcuts for navigation</span>
+    <span class="token key atrule">keyboard</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Enable the slide overview mode</span>
+    <span class="token key atrule">overview</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Vertical centering of slides</span>
+    <span class="token key atrule">center</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Enables touch navigation on devices with touch input</span>
+    <span class="token key atrule">touch</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Loop the presentation</span>
+    <span class="token key atrule">loop</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Change the presentation direction to be RTL</span>
+    <span class="token key atrule">rtl</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Randomizes the order of slides each time the presentation loads</span>
+    <span class="token key atrule">shuffle</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Turns fragments on and off globally</span>
+    <span class="token key atrule">fragments</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Flags if the presentation is running in an embedded mode,</span>
+    <span class="token comment"># i.e. contained within a limited portion of the screen</span>
+    <span class="token key atrule">embedded</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Flags if we should show a help overlay when the questionmark</span>
+    <span class="token comment"># key is pressed</span>
+    <span class="token key atrule">help</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Flags if speaker notes should be visible to all viewers</span>
+    <span class="token key atrule">showNotes</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Number of milliseconds between automatically proceeding to the</span>
+    <span class="token comment"># next slide, disabled when set to 0, this value can be overwritten</span>
+    <span class="token comment"># by using a data-autoslide attribute on your slides</span>
+    <span class="token key atrule">autoSlide</span><span class="token punctuation">:</span> <span class="token number">0</span>
+
+    <span class="token comment"># Stop auto-sliding after user input</span>
+    <span class="token key atrule">autoSlideStoppable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Enable slide navigation via mouse wheel</span>
+    <span class="token key atrule">mouseWheel</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Hides the address bar on mobile devices</span>
+    <span class="token key atrule">hideAddressBar</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token comment"># Opens links in an iframe preview overlay</span>
+    <span class="token key atrule">previewLinks</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+    <span class="token comment"># Transition style</span>
+    <span class="token key atrule">transition</span><span class="token punctuation">:</span> <span class="token string">&apos;default&apos;</span> <span class="token comment"># none/fade/slide/convex/concave/zoom</span>
+
+    <span class="token comment"># Transition speed</span>
+    <span class="token key atrule">transitionSpeed</span><span class="token punctuation">:</span> <span class="token string">&apos;default&apos;</span> <span class="token comment"># default/fast/slow</span>
+
+    <span class="token comment"># Transition style for full page slide backgrounds</span>
+    <span class="token key atrule">backgroundTransition</span><span class="token punctuation">:</span> <span class="token string">&apos;default&apos;</span> <span class="token comment"># none/fade/slide/convex/concave/zoom</span>
+
+    <span class="token comment"># Number of slides away from the current that are visible</span>
+    <span class="token key atrule">viewDistance</span><span class="token punctuation">:</span> <span class="token number">3</span>
+
+    <span class="token comment"># Parallax background image</span>
+    <span class="token key atrule">parallaxBackgroundImage</span><span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span> <span class="token comment"># e.g. &quot;&apos;https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg&apos;&quot;</span>
+
+    <span class="token comment"># Parallax background size</span>
+    <span class="token key atrule">parallaxBackgroundSize</span><span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span> <span class="token comment"># CSS syntax, e.g. &quot;2100px 900px&quot;</span>
+
+    <span class="token comment"># Number of pixels to move the parallax background per slide</span>
+    <span class="token comment"># - Calculated automatically unless specified</span>
+    <span class="token comment"># - Set to 0 to disable movement along an axis</span>
+    <span class="token key atrule">parallaxBackgroundHorizontal</span><span class="token punctuation">:</span> <span class="token null important">null</span>
+    <span class="token key atrule">parallaxBackgroundVertical</span><span class="token punctuation">:</span> <span class="token null important">null</span>
+
+    <span class="token comment"># Parallax background image</span>
+    <span class="token key atrule">parallaxBackgroundImage</span><span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span> <span class="token comment"># e.g. &quot;https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg&quot;</span>
+
+    <span class="token comment"># Parallax background size</span>
+    <span class="token key atrule">parallaxBackgroundSize</span><span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span> <span class="token comment"># CSS syntax, e.g. &quot;2100px 900px&quot; - currently only pixels are supported (don&apos;t use % or auto)</span>
+
+    <span class="token comment"># Number of pixels to move the parallax background per slide</span>
+    <span class="token comment"># - Calculated automatically unless specified</span>
+    <span class="token comment"># - Set to 0 to disable movement along an axis</span>
+    <span class="token key atrule">parallaxBackgroundHorizontal</span><span class="token punctuation">:</span> <span class="token number">200</span>
+    <span class="token key atrule">parallaxBackgroundVertical</span><span class="token punctuation">:</span> <span class="token number">50</span>
+
+    <span class="token comment"># Enable Speaker Notes</span>
+    <span class="token key atrule">enableSpeakerNotes</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token punctuation">---</span>
+
+
+</pre><hr>
+<h3 class="mume-header" id="pandoc">Pandoc</h3>
+
+<p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/pandoc">https://shd101wyy.github.io/markdown-preview-enhanced/#/pandoc</a></p>
+<hr>
+<h1 class="mume-header" id="importing-files">Importing Files</h1>
+
+<ul>
+<li><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/file-imports">Reference</a></li>
+<li>You can import files using the @import keyword.</li>
+</ul>
+<h2 class="mume-header" id="supported-file-types">Supported file types</h2>
+
+<ul>
+<li><code>.jpeg(.jpg), .gif, .png, .apng, .svg, .bmp</code> file will be treated as markdown image.</li>
+<li><code>.csv</code> file will be converted to markdown table.</li>
+<li><code>.mermaid</code> file will be rendered by mermaid.</li>
+<li><code>.dot</code> file will be rendered by viz.js (graphviz).</li>
+<li><code>.plantuml(.puml)</code> file will be rendered by PlantUML.</li>
+<li><code>.html</code> file will be embedded directly.</li>
+<li><code>.js</code> file will be included as <code>&lt;script src=&quot;your_js&quot;&gt;&lt;/script&gt;</code>.</li>
+<li><code>.less</code> and <code>.css</code> file will be included as style.
+<ul>
+<li>Only local <code>.less</code> file is currently supported.</li>
+<li><code>.css</code> file will be included as <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;your_css&quot;&gt;</code>.</li>
+</ul>
+</li>
+<li>.pdf file will be converted to svg files by pdf2svg and then be included.</li>
+<li><code>.md</code> file will be parsed and embedded directly.</li>
+<li>All other files will be rendered as code block.</li>
+</ul>
+<h2 class="mume-header" id="images">Images</h2>
+
+<pre data-role="codeBlock" data-info class="language-"><code>@import &quot;test.png&quot; {width=&quot;300px&quot; height=&quot;200px&quot; title=&quot;my title&quot; alt=&quot;my alt&quot;}
+</code></pre><h2 class="mume-header" id="online-files">Online Files</h2>
+
+<pre data-role="codeBlock" data-info class="language-"><code>@import &quot;https://raw.githubusercontent.com/shd101wyy/markdown-preview-enhanced/master/LICENSE.md&quot;
+</code></pre><h2 class="mume-header" id="code-files">Code Files</h2>
+
+<pre data-role="codeBlock" data-info class="language-"><code>@import &quot;C:\Users\bphommathep.TOTALMM\.mume\style.less&quot; { code_block=true }
+@import &quot;C:\Users\bphommathep.TOTALMM\.mume\style.less&quot; {code_block=true class=&quot;line-numbers&quot;}
+</code></pre><h3 class="mume-header" id="json">JSON</h3>
+
+<pre data-role="codeBlock" data-info class="language-"><code>@import &quot;test.json&quot; {as=&quot;vega-lite&quot;}
+</code></pre><h3 class="mume-header" id="certain-lines">Certain Lines</h3>
+
+<pre data-role="codeBlock" data-info class="language-"><code>@import &quot;test.md&quot; {line_begin=2}
+@import &quot;test.md&quot; {line_begin=2 line_end=10}
+@import &quot;test.md&quot; {line_end=-4}
+</code></pre><h3 class="mume-header" id="code-chunk-executable-code-block">Code Chunk (Executable Code Block)</h3>
+
+<pre data-role="codeBlock" data-info class="language-"><code>@import &quot;test.py&quot; {cmd=&quot;python3&quot;}
+@import &quot;test.js&quot; {cmd=&quot;node&quot;}
+</code></pre><hr>
+<h1 class="mume-header" id="graphs-diagrams">Graphs &amp; Diagrams</h1>
+
+<h2 class="mume-header" id="mermaid-diagramshttpsgithubcommermaid-jsmermaid"><a href="https://github.com/mermaid-js/mermaid">Mermaid Diagrams</a></h2>
+
+<p>Documentation: <a href="https://github.com/mermaid-js/mermaid">https://github.com/mermaid-js/mermaid</a></p>
+<h3 class="mume-header" id="simple-example">Simple Example</h3>
+
+<div align="center" class="mermaid">graph LR
+    A --&gt; B;
+    B --&gt; C;
+    C --&gt; A;
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ``` mermaid {align=&quot;center&quot;}
+    graph LR
+        A --&gt; B;
+        B --&gt; C;
+        C --&gt; A;
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="flow-chart">Flow Chart</h3>
+
+<p><a href="https://mermaid-js.github.io/mermaid/#/flowchart">https://mermaid-js.github.io/mermaid/#/flowchart</a></p>
+<hr>
+<h4 class="mume-header undefined" id="example">Example</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=&quot;center&quot;}
+    graph TD
+    A[Hard] --&gt;|Text| B(Round)
+    B --&gt; C{Decision}
+    C --&gt;|One| D[Result 1]
+    C --&gt;|Two| E[Result 2]
+    ```
+</code></pre><div align="center" class="mermaid">graph TD
+A[Hard] --&gt;|Text| B(Round)
+B --&gt; C{Decision}
+C --&gt;|One| D[Result 1]
+C --&gt;|Two| E[Result 2]
+</div><hr>
+<h4 class="mume-header undefined" id="orientation">Orientation</h4>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Orientation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>graph TB</code></td>
+<td>top to bottom</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>graph TD</code></td>
+<td>top-down/ same as top to bottom</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>graph BT</code></td>
+<td>bottom to top</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>graph RL</code></td>
+<td>right to left</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>graph LR</code></td>
+<td>left to right</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 class="mume-header undefined" id="lines">Lines</h4>
+
+<ul>
+<li>For dotted or thick links, the characters to add are equals signs or dots, as summed up in the following table:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td style="text-align:center"><code>---</code></td>
+<td style="text-align:center"><code>----</code></td>
+<td style="text-align:center"><code>-----</code></td>
+</tr>
+<tr>
+<td>Normal with arrow</td>
+<td style="text-align:center"><code>--&gt;</code></td>
+<td style="text-align:center"><code>---&gt;</code></td>
+<td style="text-align:center"><code>----&gt;</code></td>
+</tr>
+<tr>
+<td>Thick</td>
+<td style="text-align:center"><code>===</code></td>
+<td style="text-align:center"><code>====</code></td>
+<td style="text-align:center"><code>=====</code></td>
+</tr>
+<tr>
+<td>Thick with arrow</td>
+<td style="text-align:center"><code>==&gt;</code></td>
+<td style="text-align:center"><code>===&gt;</code></td>
+<td style="text-align:center"><code>====&gt;</code></td>
+</tr>
+<tr>
+<td>Dotted</td>
+<td style="text-align:center"><code>-.-</code></td>
+<td style="text-align:center"><code>-..-</code></td>
+<td style="text-align:center"><code>-...-</code></td>
+</tr>
+<tr>
+<td>Dotted with arrow</td>
+<td style="text-align:center"><code>-.-&gt;</code></td>
+<td style="text-align:center"><code>-..-&gt;</code></td>
+<td style="text-align:center"><code>-...-&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 class="mume-header undefined" id="subgraphs">Subgraphs</h4>
+
+<div class="mermaid">graph TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</div><hr>
+<h4 class="mume-header" id="node-shapes-edges">Node Shapes &amp; Edges</h4>
+
+<div align="center" class="mermaid">graph TD
+    Default[Default] 
+    Round(Round) 
+    Stadium([Stadium]) 
+    Subroutine[[Subroutine]] 
+    Cylindrical[(Cylindrical)]
+</div><div align="center" class="mermaid">graph TD
+    Cylindrical[(Database)] 
+    Circle((Circle)) 
+    Asymmetric1&gt;Asymmetric] 
+    Rhombus{Rhombus} 
+    Hexagon{{Hexagon}} 
+</div><div align="center" class="mermaid">graph TD
+    Parallelogram1[/Parallelogram/] 
+     Parallelogram2[\Parallelogram\] 
+    Trapezoid1[/Trapezoid\] 
+    Trapezoid2[\Trapezoid/]
+</div><hr>
+<h5 class="mume-header undefined" id="default">Default</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1[Default]
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1[Default]
+</div><hr>
+<h5 class="mume-header undefined" id="round-edges">Round Edges</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1(Round)
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1(Round)
+</div><hr>
+<h5 class="mume-header undefined" id="stadium-shaped-node">Stadium-Shaped Node</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1([Stadium])
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1([Stadium])
+</div><hr>
+<h5 class="mume-header undefined" id="subroutine">Subroutine</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1[[Subroutine]]
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1[[Subroutine]]
+</div><hr>
+<h5 class="mume-header undefined" id="cylindrical">Cylindrical</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1[(Database)]
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1[(Database)]
+</div><hr>
+<h5 class="mume-header undefined" id="circle">Circle</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1((Circle))
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1((Circle))
+</div><hr>
+<h5 class="mume-header undefined" id="asymmetric">Asymmetric</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1&gt;Asymmetric]
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1&gt;Asymmetric]
+</div><hr>
+<h5 class="mume-header undefined" id="rhombus">Rhombus</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1{Rhombus}
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1{Rhombus}
+</div><hr>
+<h5 class="mume-header undefined" id="hexagon">Hexagon</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph LR
+        id1{{Hexagon}}
+    ```
+</code></pre><div align="center" class="mermaid">graph LR
+    id1{{Hexagon}}
+</div><hr>
+<h5 class="mume-header undefined" id="parallelogram">Parallelogram</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph TD
+        id1[/Parallelogram/]
+    ```
+
+    ```mermaid {align=center}
+    graph TD
+        id1[\Parallelogram\]
+    ```
+</code></pre><div align="center" class="mermaid">graph TD
+    id1[/Parallelogram/]
+</div><div align="center" class="mermaid">graph TD
+    id1[\Parallelogram\]
+</div><hr>
+<h5 class="mume-header undefined" id="trapezoid">Trapezoid</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=center}
+    graph TD
+        id1[/Trapezoid\]
+    ```
+
+    ```mermaid {align=center}
+    graph TD
+        id1[\Trapezoid/]
+    ```
+</code></pre><div align="center" class="mermaid">graph TD
+    id1[/Trapezoid\]
+</div><div align="center" class="mermaid">graph TD
+    id1[\Trapezoid/]
+</div><hr>
+<h4 class="mume-header" id="interaction">Interaction</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid
+    graph LR;
+        A--&gt;B;
+        B--&gt;C;
+        C--&gt;D;
+        click A callback &quot;Tooltip for a callback&quot;
+        click B &quot;http://www.github.com&quot; &quot;This is a tooltip for a link&quot;
+        click A call callback() &quot;Tooltip for a callback&quot;
+        click B href &quot;http://www.github.com&quot; &quot;This is a tooltip for a link&quot;
+    ```
+</code></pre><hr>
+<h4 class="mume-header undefined" id="comments">Comments</h4>
+
+<ul>
+<li>Use <code>%%</code> for comments.</li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid
+    graph LR
+    %% this is a comment A -- text --&gt; B{node}
+    A -- text --&gt; B -- text2 --&gt; C
+    ```
+</code></pre><div class="mermaid">graph LR
+%% this is a comment A -- text --&gt; B{node}
+A -- text --&gt; B -- text2 --&gt; C
+</div><hr>
+<h4 class="mume-header" id="css-styling-1">CSS Styling</h4>
+
+<h5 class="mume-header undefined" id="inline-styling">Inline Styling</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid
+    graph LR
+        id1(Start)--&gt;id2(Stop)
+        style id1 fill:#f9f,stroke:#333,stroke-width:4px
+        style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+    ```
+</code></pre><div class="mermaid">graph LR
+    id1(Start)--&gt;id2(Stop)
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px
+    style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+</div><hr>
+<h5 class="mume-header undefined" id="inline-classes">Inline Classes</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid
+    graph LR
+        A:::someclass --&gt; B
+        classDef someclass fill:#f96;
+    ```
+</code></pre><div class="mermaid">graph LR
+    A:::someclass --&gt; B
+    classDef someclass fill:#f96;
+</div><hr>
+<h5 class="mume-header undefined" id="using-css-classes">Using Css Classes</h5>
+
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector"><span class="token class">.cssClass</span> <span class="token combinator">&gt;</span> rect</span><span class="token punctuation">{</span>
+        <span class="token property">fill</span><span class="token punctuation">:</span><span class="token hexcode color">#FF0000</span><span class="token punctuation">;</span>
+        <span class="token property">stroke</span><span class="token punctuation">:</span><span class="token hexcode color">#FFFF00</span><span class="token punctuation">;</span>
+        <span class="token property">stroke-width</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token unit">px</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</pre><pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid
+    graph LR;
+        A--&gt;B[AAA&lt;span&gt;BBB&lt;/span&gt;];
+        B--&gt;D;
+        class A cssClass;
+    ```
+</code></pre><div class="mermaid">graph LR;
+    A--&gt;B[AAA&lt;span&gt;BBB&lt;/span&gt;];
+    B--&gt;D;
+    class A cssClass;
+</div><hr>
+<hr>
+<h3 class="mume-header" id="gantt-chart">Gantt Chart</h3>
+
+<div align="center" class="mermaid">gantt
+section Section
+Completed    :done,    des1, 2014-01-06,2014-01-08
+Active       :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=&quot;center&quot;}
+    gantt
+    section Section
+    Completed    :done,    des1, 2014-01-06,2014-01-08
+    Active       :active,  des2, 2014-01-07, 3d
+    Parallel 1   :         des3, after des1, 1d
+    Parallel 2   :         des4, after des1, 1d
+    Parallel 3   :         des5, after des3, 1d
+    Parallel 4   :         des6, after des4, 1d
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="pie-chart">Pie Chart</h3>
+
+<div align="center" class="mermaid">pie
+&quot;Dogs&quot; : 386
+&quot;Cats&quot; : 85
+&quot;Rats&quot; : 15
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=&quot;center&quot;}
+    pie
+    &quot;Dogs&quot; : 386
+    &quot;Cats&quot; : 85
+    &quot;Rats&quot; : 15
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="class-diagram">Class Diagram</h3>
+
+<p><a href="https://mermaid-js.github.io/mermaid/#/classDiagram">https://mermaid-js.github.io/mermaid/#/classDiagram</a></p>
+<h4 class="mume-header undefined" id="example-1">Example</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=&quot;center&quot;}
+    classDiagram
+    Class01 &lt;|-- AveryLongClass : Cool
+    link Class01 &quot;http://www.github.com&quot; &quot;This is a tooltip for a link&quot;
+    &lt;&lt;interface&gt;&gt; Class01
+    Class09 --&gt; C2 : Where am i?
+    Class09 --* C3
+    Class09 --|&gt; Class07
+    callback Class09 &quot;callbackFunction&quot; &quot;This is a tooltip for a callback&quot;
+    Class07 : equals()
+    click Class07 call callbackFunction() &quot;This is a tooltip for a callback&quot;
+    Class07 : Object[] elementData
+    Class01 : size()
+    Class01 : int chimp
+    Class01 : int gorilla
+    class Class10 {
+      &lt;&lt;service&gt;&gt;
+      int id
+      size()
+    }
+    
+    ```
+</code></pre><div align="center" class="mermaid">classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+link Class01 &quot;http://www.github.com&quot; &quot;This is a tooltip for a link&quot;
+&lt;&lt;interface&gt;&gt; Class01
+Class09 --&gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &lt;&lt;service&gt;&gt;
+  int id
+  size()
+}
+</div><div align="center" class="mermaid">%%{init: {&apos;theme&apos;: &apos;default&apos;, &apos;themeVariables&apos;: { &apos;fontSize&apos;: 50 }}}%%
+%%{config: { &apos;fontFamily&apos;: &apos;Menlo&apos;, &apos;fontSize&apos;: 18, &apos;fontWeight&apos;: 400} }%%
+classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+link Class01 &quot;http://www.github.com&quot; &quot;This is a tooltip for a link&quot;
+&lt;&lt;interface&gt;&gt; Class01
+Class09 --&gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &lt;&lt;service&gt;&gt;
+  int id
+  size()
+}
+</div><h4 class="mume-header undefined" id="css-styling-2">CSS Styling</h4>
+
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>g.classGroup text</code></td>
+<td>Styles for general class text</td>
+</tr>
+<tr>
+<td><code>classGroup .title</code></td>
+<td>Styles for general class title</td>
+</tr>
+<tr>
+<td><code>g.classGroup rect</code></td>
+<td>Styles for class diagram rectangle</td>
+</tr>
+<tr>
+<td><code>g.classGroup line</code></td>
+<td>Styles for class diagram line</td>
+</tr>
+<tr>
+<td><code>.classLabel .box</code></td>
+<td>Styles for class label box</td>
+</tr>
+<tr>
+<td><code>.classLabel .label</code></td>
+<td>Styles for class label text</td>
+</tr>
+<tr>
+<td><code>composition</code></td>
+<td>Styles for composition arrow head and arrow line</td>
+</tr>
+<tr>
+<td><code>aggregation</code></td>
+<td>Styles for aggregation arrow head and arrow line(dashed or solid)</td>
+</tr>
+<tr>
+<td><code>dependency</code></td>
+<td>Styles for dependency arrow head and arrow line</td>
+</tr>
+</tbody>
+</table>
+<pre data-role="codeBlock" data-info="scss" class="language-scss"><span class="token selector">body </span><span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token color">white</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">g.classGroup text </span><span class="token punctuation">{</span>
+    <span class="token property">fill</span><span class="token punctuation">:</span> <span class="token variable">$nodeBorder</span><span class="token punctuation">;</span>
+    <span class="token property">stroke</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">&apos;trebuchet ms&apos;</span><span class="token punctuation">,</span> verdana<span class="token punctuation">,</span> arial<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--mermaid-font-family<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token unit">px</span><span class="token punctuation">;</span>
+
+    <span class="token selector">.title </span><span class="token punctuation">{</span>
+        <span class="token property">font-weight</span><span class="token punctuation">:</span> bolder<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">g.classGroup rect </span><span class="token punctuation">{</span>
+    <span class="token property">fill</span><span class="token punctuation">:</span> <span class="token variable">$nodeBkg</span><span class="token punctuation">;</span>
+    <span class="token property">stroke</span><span class="token punctuation">:</span> <span class="token variable">$nodeBorder</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">g.classGroup line </span><span class="token punctuation">{</span>
+    <span class="token property">stroke</span><span class="token punctuation">:</span> <span class="token variable">$nodeBorder</span><span class="token punctuation">;</span>
+    <span class="token property">stroke-width</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.classLabel .box </span><span class="token punctuation">{</span>
+    <span class="token property">stroke</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">stroke-width</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">fill</span><span class="token punctuation">:</span> <span class="token variable">$nodeBkg</span><span class="token punctuation">;</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0.5</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.classLabel .label </span><span class="token punctuation">{</span>
+    <span class="token property">fill</span><span class="token punctuation">:</span> <span class="token variable">$nodeBorder</span><span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token unit">px</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.relation </span><span class="token punctuation">{</span>
+    <span class="token property">stroke</span><span class="token punctuation">:</span> <span class="token variable">$nodeBorder</span><span class="token punctuation">;</span>
+    <span class="token property">stroke-width</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token property">fill</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@mixin</span> <span class="token selector">composition </span><span class="token punctuation">{</span>
+    <span class="token property">fill</span><span class="token punctuation">:</span> <span class="token variable">$nodeBorder</span><span class="token punctuation">;</span>
+    <span class="token property">stroke</span><span class="token punctuation">:</span> <span class="token variable">$nodeBorder</span><span class="token punctuation">;</span>
+    <span class="token property">stroke-width</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#compositionStart </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> composition<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#compositionEnd </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> composition<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@mixin</span> <span class="token selector">aggregation </span><span class="token punctuation">{</span>
+    <span class="token property">fill</span><span class="token punctuation">:</span> <span class="token variable">$nodeBkg</span><span class="token punctuation">;</span>
+    <span class="token property">stroke</span><span class="token punctuation">:</span> <span class="token variable">$nodeBorder</span><span class="token punctuation">;</span>
+    <span class="token property">stroke-width</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#aggregationStart </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> aggregation<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#aggregationEnd </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> aggregation<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#dependencyStart </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> composition<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#dependencyEnd </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> composition<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#extensionStart </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> composition<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#extensionEnd </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> composition<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><hr>
+<h3 class="mume-header" id="entity-relationship-diagram">Entity Relationship Diagram</h3>
+
+<p><a href="https://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram">https://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram</a></p>
+<h4 class="mume-header undefined" id="example-2">Example</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=&quot;center&quot;}
+    erDiagram
+        CUSTOMER ||--o{ ORDER : places
+        ORDER ||--|{ LINE-ITEM : contains
+        CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+    ```
+</code></pre><div align="center" class="mermaid">erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+</div><h4 class="mume-header undefined" id="relationships">Relationships</h4>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Value (left)</th>
+<th style="text-align:center">Value (right)</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>|o</code></td>
+<td style="text-align:center"><code>o|</code></td>
+<td>Zero or one</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>||</code></td>
+<td style="text-align:center"><code>||</code></td>
+<td>Exactly one</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>}o</code></td>
+<td style="text-align:center"><code>o{</code></td>
+<td>Zero or more (no upper limit)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>}|</code></td>
+<td style="text-align:center"><code>|{</code></td>
+<td>One or more (no upper limit)</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header undefined" id="css-styling-3">CSS Styling</h4>
+
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.er.attributeBoxEven</code></td>
+<td>The box containing attributes on even-numbered rows</td>
+</tr>
+<tr>
+<td><code>.er.attributeBoxOdd</code></td>
+<td>The box containing attributes on odd-numbered rows</td>
+</tr>
+<tr>
+<td><code>.er.entityBox</code></td>
+<td>The box representing an entity</td>
+</tr>
+<tr>
+<td><code>.er.entityLabel</code></td>
+<td>The label for an entity</td>
+</tr>
+<tr>
+<td><code>.er.relationshipLabel</code></td>
+<td>The label for a relationship</td>
+</tr>
+<tr>
+<td><code>.er.relationshipLabelBox</code></td>
+<td>The box surrounding a relationship label</td>
+</tr>
+<tr>
+<td><code>.er.relationshipLine</code></td>
+<td>The line representing a relationship between entities</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 class="mume-header" id="state-diagram">State Diagram</h3>
+
+<div align="center" class="mermaid">stateDiagram-v2
+[*] --&gt; Still
+Still --&gt; [*]
+Still --&gt; Moving
+Moving --&gt; Still
+Moving --&gt; Crash
+Crash --&gt; [*]
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=&quot;center&quot;}
+    stateDiagram-v2
+    [*] --&gt; Still
+    Still --&gt; [*]
+    Still --&gt; Moving
+    Moving --&gt; Still
+    Moving --&gt; Crash
+    Crash --&gt; [*]
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="user-journey">User Journey</h3>
+
+<div align="center" class="mermaid">  journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 3: Me
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=&quot;center&quot;}
+      journey
+        title My working day
+        section Go to work
+          Make tea: 5: Me
+          Go upstairs: 3: Me
+          Do work: 1: Me, Cat
+        section Go home
+          Go downstairs: 5: Me
+          Sit down: 3: Me
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="sequence">Sequence</h3>
+
+<p>See More <a href="#js-sequence-diagramshttpsbrampgithubiojs-sequence-diagrams">Sequence Diagrams</a></p>
+<div align="center" class="mermaid">sequenceDiagram
+Alice-&gt;&gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&gt;&gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&gt;&gt;Alice: Great!
+John-&gt;&gt;Bob: How about you?
+Bob--&gt;&gt;John: Jolly good!
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid {align=&quot;center&quot;}
+    sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="directives">Directives</h3>
+
+<table>
+<thead>
+<tr>
+<th>Directive</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%%init%%</code></td>
+<td><code>%%{init: { &apos;logLevel&apos;: &apos;debug&apos;, &apos;theme&apos;: &apos;dark&apos; } }%%</code></td>
+</tr>
+<tr>
+<td><code>%%config%%</code></td>
+<td><code>%%{config: { &apos;fontFamily&apos;: &apos;Menlo&apos;, &apos;fontSize&apos;: 18, &apos;fontWeight&apos;: 400} }%%</code></td>
+</tr>
+</tbody>
+</table>
+<pre data-role="codeBlock" data-info class="language-"><code>    %%{init: { &apos;logLevel&apos;: &apos;debug&apos;, &apos;theme&apos;: &apos;dark&apos; } }%%
+    sequenceDiagram
+    %%{config: { &apos;fontFamily&apos;: &apos;Menlo&apos;, &apos;fontSize&apos;: 18, &apos;fontWeight&apos;: 400} }%%
+    Alice-&gt;&gt;Bob: Hi Bob
+    Bob-&gt;&gt;Alice: Hi Alice
+</code></pre><div class="mermaid">%%{init: { &apos;logLevel&apos;: &apos;debug&apos;, &apos;theme&apos;: &apos;dark&apos; } }%%
+sequenceDiagram
+%%{config: { &apos;fontFamily&apos;: &apos;Menlo&apos;, &apos;fontSize&apos;: 18, &apos;fontWeight&apos;: 400} }%%
+Alice-&gt;&gt;Bob: Hi Bob
+Bob-&gt;&gt;Alice: Hi Alice
+</div><h3 class="mume-header" id="theming">Theming</h3>
+
+<p>Larger flowchart with some styling</p>
+<pre data-role="codeBlock" data-info class="language-"><code>    ```mermaid
+    graph TB
+        sq[Square shape] --&gt; ci((Circle shape))
+
+        subgraph A
+            od&gt;Odd shape]-- Two line&lt;br/&gt;edge comment --&gt; ro
+            di{Diamond with &lt;br/&gt; line break} -.-&gt; ro(Rounded&lt;br&gt;square&lt;br&gt;shape)
+            di==&gt;ro2(Rounded square shape)
+        end
+
+        %% Notice that no text in shape are added here instead that is appended further down
+        e --&gt; od3&gt;Really long text with linebreak&lt;br&gt;in an Odd shape]
+
+        %% Comments after double percent signs
+        e((Inner / circle&lt;br&gt;and some odd &lt;br&gt;special characters)) --&gt; f(,.?!+-*&#x632;)
+
+        cyr[Cyrillic]--&gt;cyr2((Circle shape &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x43E;));
+
+        classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+        classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+        class sq,e green
+        class di orange
+    ```
+</code></pre><div class="mermaid">graph TB
+    sq[Square shape] --&gt; ci((Circle shape))
+
+    subgraph A
+        od&gt;Odd shape]-- Two line&lt;br/&gt;edge comment --&gt; ro
+        di{Diamond with &lt;br/&gt; line break} -.-&gt; ro(Rounded&lt;br&gt;square&lt;br&gt;shape)
+        di==&gt;ro2(Rounded square shape)
+    end
+
+    %% Notice that no text in shape are added here instead that is appended further down
+    e --&gt; od3&gt;Really long text with linebreak&lt;br&gt;in an Odd shape]
+
+    %% Comments after double percent signs
+    e((Inner / circle&lt;br&gt;and some odd &lt;br&gt;special characters)) --&gt; f(,.?!+-*&#x632;)
+
+    cyr[Cyrillic]--&gt;cyr2((Circle shape &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x43E;));
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class sq,e green
+     class di orange
+</div><h4 class="mume-header" id="theme-variables">Theme Variables</h4>
+
+<ul>
+<li>Uses <code>%%init%%</code>.</li>
+</ul>
+<div class="mermaid">%%{init: {&apos;theme&apos;: &apos;base&apos;, &apos;themeVariables&apos;: { &apos;primaryColor&apos;: &apos;#ff0000&apos;}}}%%
+graph TD
+    A[Christmas] --&gt;|Get money| B(Go shopping)
+    B --&gt; C{Let me think}
+    B --&gt; G[/Another/]
+    C ==&gt;|One| D[Laptop]
+    C --&gt;|Two| E[iPhone]
+    C --&gt;|Three| F[fa:fa-car Car]
+    subgraph section
+    C
+    D
+    E
+    F
+    G
+    end
+</div><hr>
+<h4 class="mume-header" id="theme-variables-reference-table">Theme Variables Reference Table</h4>
+
+<p><a href="https://mermaid-js.github.io/mermaid/#/theming?id=theme-variables-reference-table">https://mermaid-js.github.io/mermaid/#/theming?id=theme-variables-reference-table</a></p>
+<ul>
+<li>Variables that are unique to some diagrams can be affected by changes in Theme Variables</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default/Base/Factor value</th>
+<th>Calc</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>darkMode</td>
+<td colspan="2">false</td>
+
+<td>Boolean Value that dictates how to calculate colors. &quot;true&quot; will activate darkmode.</td>
+</tr>
+<tr>
+<td>background</td>
+<td colspan="2">#f4f4f4</td>
+
+<td>Used to calculate color for items that should either be background colored or contrasting to the background.</td>
+</tr>
+<tr>
+<td>primaryColor</td>
+<td colspan="2">#fff4dd</td>
+
+<td>Color to be used as background in nodes, other colors will be derived from this</td>
+</tr>
+<tr>
+<td>fontFamily</td>
+<td colspan="3">&quot;trebuchet ms&quot;, verdana, arial</td>
+
+
+</tr>
+<tr>
+<td>fontSize</td>
+<td colspan="2">16px</td>
+
+<td>Font Size, in pixels</td>
+</tr>
+<tr>
+<td>secondaryColor</td>
+<td>based on primaryColor</td>
+<td colspan="2">*</td>
+
+</tr>
+<tr>
+<td>tertiaryColor</td>
+<td>based on primaryColor</td>
+<td colspan="2">*</td>
+
+</tr>
+<tr>
+<td>primaryBorderColor</td>
+<td>based on primaryColor</td>
+<td>*</td>
+<td>Color to be used as border in nodes using primaryColor</td>
+</tr>
+<tr>
+<td>primaryTextColor</td>
+<td>based on darkMode #ddd/#333</td>
+<td>*</td>
+<td>Color to be used as text color in nodes using primaryColor</td>
+</tr>
+<tr>
+<td>secondaryBorderColor</td>
+<td>based on secondaryColor</td>
+<td>*</td>
+<td>Color to be used as border in nodes using secondaryColor</td>
+</tr>
+<tr>
+<td>secondaryTextColor</td>
+<td>based on secondaryColor</td>
+<td>*</td>
+<td>Color to be used as text color in nodes using secondaryColor</td>
+</tr>
+<tr>
+<td>tertiaryBorderColor</td>
+<td>based on tertiaryColor</td>
+<td>*</td>
+<td>Color to be used as border in nodes using tertiaryColor</td>
+</tr>
+<tr>
+<td>tertiaryTextColor</td>
+<td>based on tertiaryColor</td>
+<td>*</td>
+<td>Color to be used as text color in nodes using tertiaryColor</td>
+</tr>
+<tr>
+<td>noteBkgColor</td>
+<td colspan="2">#fff5ad</td>
+
+<td>Color used as background in notes</td>
+</tr>
+<tr>
+<td>noteTextColor</td>
+<td colspan="2">#333</td>
+
+<td>Text color in note rectangles.</td>
+</tr>
+<tr>
+<td>noteBorderColor</td>
+<td>based on noteBkgColor</td>
+<td>*</td>
+<td>Border color in note rectangles.</td>
+</tr>
+<tr>
+<td>lineColor</td>
+<td>based on background</td>
+<td colspan="2">*</td>
+
+</tr>
+<tr>
+<td>textColor</td>
+<td>based on primaryTextColor</td>
+<td>*</td>
+<td>Text in diagram over the background for instance text on labels and on signals in sequence diagram or the title in gantt diagram</td>
+</tr>
+<tr>
+<td>mainBkg</td>
+<td>based on primaryColor</td>
+<td>*</td>
+<td>Background in flowchart objects like rects/circles, class diagram classes, sequence diagram etc</td>
+</tr>
+<tr>
+<td>errorBkgColor</td>
+<td>tertiaryColor</td>
+<td>*</td>
+<td>Color for syntax error message</td>
+</tr>
+<tr>
+<td>errorTextColor</td>
+<td>tertiaryTextColor</td>
+<td>*</td>
+<td>Color for syntax error message</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="mume-header" id="sequence-diagrams">Sequence Diagrams</h2>
+
+<p>Documentation: <a href="https://bramp.github.io/js-sequence-diagrams/">https://bramp.github.io/js-sequence-diagrams/</a></p>
+<h3 class="mume-header" id="simple-example-1">Simple Example</h3>
+
+<div align="center" class="sequence">Object1-&gt;Object2: Something
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```sequence {align=&quot;center&quot;}
+    Object1-&gt;Object2: Something
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="participants">Participants</h3>
+
+<div align="center" class="sequence">participant C
+participant B
+participant A
+Note right of A: By listing the participants\n you can change their order
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```sequence {align=&quot;center&quot;}
+    participant C
+    participant B
+    participant A
+    Note right of A: By listing the participants\n you can change their order
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="lines-1">Lines</h3>
+
+<div align="center" class="sequence">Title: Here is a title
+A-&gt;B: Normal line
+B--&gt;C: Dashed line
+C-&gt;&gt;D: Open arrow
+D--&gt;&gt;A: Dashed open arrow
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```sequence {align=&quot;center&quot;}
+    Title: Here is a title
+    A-&gt;B: Normal line
+    B--&gt;C: Dashed line
+    C-&gt;&gt;D: Open arrow
+    D--&gt;&gt;A: Dashed open arrow
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="comments-and-notes">Comments and Notes</h3>
+
+<div align="center" class="sequence"># Example of a comment.
+Note left of A: Note to the\n left of A
+Note right of A: Note to the\n right of A
+Note over A: Note over A
+Note over A,B: Note over both A and B
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```sequence {align=&quot;center&quot;}
+    # Example of a comment.
+    Note left of A: Note to the\n left of A
+    Note right of A: Note to the\n right of A
+    Note over A: Note over A
+    Note over A,B: Note over both A and B
+    ```
+</code></pre><hr>
+<h3 class="mume-header" id="hand-drawn-theme">Hand Drawn Theme</h3>
+
+<div theme="hand" align="center" class="sequence">Title: Example of a hand drawn graph
+Andrew-&gt;China: Says Hello
+Note right of China: China thinks\nabout it
+China--&gt;Andrew: How are you?
+Andrew-&gt;&gt;China: I am good thanks!
+</div><pre data-role="codeBlock" data-info class="language-"><code>    ```sequence {theme=&quot;hand&quot;; align=&quot;center&quot;}
+    Title: Example of a hand drawn graph
+    Andrew-&gt;China: Says Hello
+    Note right of China: China thinks\nabout it
+    China--&gt;Andrew: How are you?
+    Andrew-&gt;&gt;China: I am good thanks!
+    ```
+</code></pre><div class="code-chunk" data-id="798dc174494a2c834724ea59d7249d40" data-cmd="js" data-code="window.addEventListener(&apos;load&apos;, (event) =&gt; {
+    document.getElementsByTagName(&apos;body&apos;)[0].setAttribute(&apos;html-show-sidebar-toc&apos;, true);
+
+    var activelinkClassName = &apos;toc-active-link&apos;;
+    var parentlinkClassName = &apos;toc-active-link-parent&apos;;
+
+    var child = document.querySelectorAll(&apos;.md-sidebar-toc a&apos;)[0];
+    child.classList.add(activelinkClassName);
+    child.parentNode.classList.add(parentlinkClassName);
+
+    // document.querySelectorAll(&apos;.md-sidebar-toc a&apos;)[0].classList.add(activelinkClassName);
+
+    window.onscroll = () =&gt; {
+        function getHeaderLinkId() {
+            var headers = document.querySelectorAll(&apos;h1, h2, h3, h4, h5, h6&apos;);
+
+            if (headers === undefined &amp;&amp; headers.length === 0)
+                return;
+                
+            // Bottom of the page =&gt; Use last link
+            if ((window.innerHeight + window.scrollY) &gt;= document.body.offsetHeight)
+                return headers[headers.length - 1].id;
+            
+            for (let i = 0; i &lt; headers.length; i++) {
+                var top = headers[i].getBoundingClientRect().top;
+              
+                if (top &gt; 0) {
+                    if (top &lt; 10) {
+                        return headers[i].id;
+                    } else {
+                        return (headers[i - 1] !== undefined) ? 
+                            headers[i - 1].id : headers[i].id;
+                    }
+                }
+            }
+        }
+        
+        function getActiveTOCLink(id){
+            var links = document.querySelectorAll(&apos;.md-sidebar-toc a&apos;);
+            for (let i = 0; i &lt; links.length; i++) {
+                if (links[i].href.includes(id))
+                    return links[i];
+            }
+        }
+        
+        function resetLinks(){
+            var activelinks = document.querySelectorAll(&apos;.&apos; + activelinkClassName);
+            for (let i = 0; i &lt; activelinks.length; i++) {
+                activelinks[i].classList.remove(activelinkClassName);
+                activelinks[i].parentNode.classList.remove(parentlinkClassName);
+            }
+        }
+        
+        var headerId = getHeaderLinkId();
+        if (headerId !== undefined) {
+            var tocElement = getActiveTOCLink(headerId)
+            
+            if (tocElement !== null &amp;&amp; tocElement !== undefined) {
+                resetLinks();
+                tocElement.classList.add(activelinkClassName);
+                tocElement.parentNode.classList.add(parentlinkClassName);
+            }
+        }
+    }
+});
+"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div><script>window.addEventListener('load', (event) => {
+    document.getElementsByTagName('body')[0].setAttribute('html-show-sidebar-toc', true);
+
+    var activelinkClassName = 'toc-active-link';
+    var parentlinkClassName = 'toc-active-link-parent';
+
+    var child = document.querySelectorAll('.md-sidebar-toc a')[0];
+    child.classList.add(activelinkClassName);
+    child.parentNode.classList.add(parentlinkClassName);
+
+    // document.querySelectorAll('.md-sidebar-toc a')[0].classList.add(activelinkClassName);
+
+    window.onscroll = () => {
+        function getHeaderLinkId() {
+            var headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+            if (headers === undefined && headers.length === 0)
+                return;
+                
+            // Bottom of the page => Use last link
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight)
+                return headers[headers.length - 1].id;
+            
+            for (let i = 0; i < headers.length; i++) {
+                var top = headers[i].getBoundingClientRect().top;
+              
+                if (top > 0) {
+                    if (top < 10) {
+                        return headers[i].id;
+                    } else {
+                        return (headers[i - 1] !== undefined) ? 
+                            headers[i - 1].id : headers[i].id;
+                    }
+                }
+            }
+        }
+        
+        function getActiveTOCLink(id){
+            var links = document.querySelectorAll('.md-sidebar-toc a');
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].href.includes(id))
+                    return links[i];
+            }
+        }
+        
+        function resetLinks(){
+            var activelinks = document.querySelectorAll('.' + activelinkClassName);
+            for (let i = 0; i < activelinks.length; i++) {
+                activelinks[i].classList.remove(activelinkClassName);
+                activelinks[i].parentNode.classList.remove(parentlinkClassName);
+            }
+        }
+        
+        var headerId = getHeaderLinkId();
+        if (headerId !== undefined) {
+            var tocElement = getActiveTOCLink(headerId)
+            
+            if (tocElement !== null && tocElement !== undefined) {
+                resetLinks();
+                tocElement.classList.add(activelinkClassName);
+                tocElement.parentNode.classList.add(parentlinkClassName);
+            }
+        }
+    }
+});
+</script></div><div class="code-chunk" data-id="33beda268326070408a7c6c5d06ec533" data-cmd="js" data-code="//window.addEventListener(&apos;DOMContentLoaded&apos;, (event) =&gt; {
+window.addEventListener(&apos;load&apos;, (event) =&gt; {
+    //  Set the language name on code blocks
+    // var codeblocks = document.querySelectorAll(&apos;pre:not([class$=&quot;-&quot;])&apos;);
+    var codeblocks = document.querySelectorAll(&apos;pre&apos;);
+
+    for (let i = 0; i &lt; codeblocks.length; i++) {
+        var attributeName = &apos;code-collapsed&apos;;
+        var block = codeblocks[i];
+
+        //  Set the ID
+        block.id = &apos;pre-&apos; + i;
+
+        //  Create a container
+        var container = document.createElement(&apos;div&apos;);
+        container.id = &apos;codeblock-&apos; + i;
+        container.classList.add(&apos;code-container&apos;);
+        block.parentElement.insertBefore(container, block);
+
+
+        //  Set the language
+        var codelanguage = block.classList[0].replace(&apos;language-&apos;, &apos;&apos;);
+
+        if (codelanguage.length &gt; 0) {
+            block.setAttribute(&apos;code-language&apos;, codelanguage);
+            container.setAttribute(&apos;code-language&apos;, codelanguage);
+        } else {
+            block.setAttribute(&apos;code-language&apos;, &apos;code&apos;);
+            container.setAttribute(&apos;code-language&apos;, &apos;code&apos;);
+        }
+
+        var codeButton = document.createElement(&apos;button&apos;);
+        codeButton.classList.add(&apos;code-button&apos;);
+
+        codeButton.onclick = () =&gt; {
+            var elem1 = document.getElementById(&apos;pre-&apos; + i);
+            var elem2 = document.getElementById(&apos;codeblock-&apos; + i);
+
+            if (elem1.hasAttribute(attributeName)) {
+                elem1.removeAttribute(attributeName)
+                elem2.removeAttribute(attributeName)
+            } else {
+                elem1.setAttribute(attributeName, true)
+                elem2.setAttribute(attributeName, true)
+            }
+        }
+
+        container.appendChild(codeButton);
+        container.appendChild(block);
+    }
+});
+
+"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div><script>//window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('load', (event) => {
+    //  Set the language name on code blocks
+    // var codeblocks = document.querySelectorAll('pre:not([class$="-"])');
+    var codeblocks = document.querySelectorAll('pre');
+
+    for (let i = 0; i < codeblocks.length; i++) {
+        var attributeName = 'code-collapsed';
+        var block = codeblocks[i];
+
+        //  Set the ID
+        block.id = 'pre-' + i;
+
+        //  Create a container
+        var container = document.createElement('div');
+        container.id = 'codeblock-' + i;
+        container.classList.add('code-container');
+        block.parentElement.insertBefore(container, block);
+
+
+        //  Set the language
+        var codelanguage = block.classList[0].replace('language-', '');
+
+        if (codelanguage.length > 0) {
+            block.setAttribute('code-language', codelanguage);
+            container.setAttribute('code-language', codelanguage);
+        } else {
+            block.setAttribute('code-language', 'code');
+            container.setAttribute('code-language', 'code');
+        }
+
+        var codeButton = document.createElement('button');
+        codeButton.classList.add('code-button');
+
+        codeButton.onclick = () => {
+            var elem1 = document.getElementById('pre-' + i);
+            var elem2 = document.getElementById('codeblock-' + i);
+
+            if (elem1.hasAttribute(attributeName)) {
+                elem1.removeAttribute(attributeName)
+                elem2.removeAttribute(attributeName)
+            } else {
+                elem1.setAttribute(attributeName, true)
+                elem2.setAttribute(attributeName, true)
+            }
+        }
+
+        container.appendChild(codeButton);
+        container.appendChild(block);
+    }
+});
+
+</script></div><hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/html?id=configuration">https://shd101wyy.github.io/markdown-preview-enhanced/#/html?id=configuration</a> <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#vs-code-setup">VS Code Setup</a>
+<ul>
+<li><a href="#vs-extensions">VS Extensions</a>
+<ul>
+<li><a href="#front-matter">Front-Matter</a>
+<ul>
+<li><a href="#yaml">YAML</a></li>
+</ul>
+</li>
+<li><a href="#side-table-of-contents">Side Table Of Contents</a></li>
+<li><a href="#css-styling">CSS Styling</a></li>
+<li><a href="#default-open-toc">Default Open TOC</a></li>
+<li><a href="#presentation-mode">Presentation Mode</a>
+<ul>
+<li><a href="#settings">Settings</a></li>
+</ul>
+</li>
+<li><a href="#pandoc">Pandoc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#importing-files">Importing Files</a>
+<ul>
+<li><a href="#supported-file-types">Supported file types</a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#online-files">Online Files</a></li>
+<li><a href="#code-files">Code Files</a>
+<ul>
+<li><a href="#json">JSON</a></li>
+<li><a href="#certain-lines">Certain Lines</a></li>
+<li><a href="#code-chunk-executable-code-block">Code Chunk (Executable Code Block)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#graphs-diagrams">Graphs &amp; Diagrams</a>
+<ul>
+<li><a href="#mermaid-diagramshttpsgithubcommermaid-jsmermaid">Mermaid Diagrams</a>
+<ul>
+<li><a href="#simple-example">Simple Example</a></li>
+<li><a href="#flow-chart">Flow Chart</a>
+<ul>
+<li><a href="#node-shapes-edges">Node Shapes &amp; Edges</a></li>
+<li><a href="#interaction">Interaction</a></li>
+<li><a href="#css-styling-1">CSS Styling</a></li>
+</ul>
+</li>
+<li><a href="#gantt-chart">Gantt Chart</a></li>
+<li><a href="#pie-chart">Pie Chart</a></li>
+<li><a href="#class-diagram">Class Diagram</a></li>
+<li><a href="#entity-relationship-diagram">Entity Relationship Diagram</a></li>
+<li><a href="#state-diagram">State Diagram</a></li>
+<li><a href="#user-journey">User Journey</a></li>
+<li><a href="#sequence">Sequence</a></li>
+<li><a href="#directives">Directives</a></li>
+<li><a href="#theming">Theming</a>
+<ul>
+<li><a href="#theme-variables">Theme Variables</a></li>
+<li><a href="#theme-variables-reference-table">Theme Variables Reference Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sequence-diagrams">Sequence Diagrams</a>
+<ul>
+<li><a href="#simple-example-1">Simple Example</a></li>
+<li><a href="#participants">Participants</a></li>
+<li><a href="#lines-1">Lines</a></li>
+<li><a href="#comments-and-notes">Comments and Notes</a></li>
+<li><a href="#hand-drawn-theme">Hand Drawn Theme</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+
+//  theme
+//    default
+//    base
+//    dark
+
+MERMAID_CONFIG = {
+  startOnLoad: false,
+
+  // darkMode: false,
+  // theme: 'dark',
+  // themeVariables: { 'primaryColor': '#ff0000'}
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "dark"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
+    
+    
+    
+    <script>
+      var sequenceDiagrams = document.getElementsByClassName('sequence')
+      for (var i = 0; i < sequenceDiagrams.length; i++) {
+        var sequence = sequenceDiagrams[i]
+        try {
+          var diagram = Diagram.parse(sequence.textContent)
+          var theme = sequence.getAttribute('theme') || 'simple'
+          sequence.id = 'sequence_' + i
+          sequence.innerHTML = ''
+          diagram.drawSVG(sequence.id, {theme: theme})
+        } catch (error) {
+          sequence.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+        }
+      }
+      </script>
+    
+<script>
+document.body.setAttribute('html-show-sidebar-toc', true)
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
