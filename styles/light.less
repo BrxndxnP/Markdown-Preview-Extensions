@@ -87,29 +87,42 @@
 /*#endregion Theme */
 
 
+
+
+
+
+
+/*#region Markdown Body */
+
 html, body {
     background-color: @background-general !important;
     overflow-x: hidden;
 }
 
+// Self
 .markdown-preview.markdown-preview {
     background-color: @background-general;
-    // background-color: @background-body;
+}
 
+// Paragraphs
+.markdown-preview.markdown-preview {
     p {
         font-size: @general-font-size;
         margin-block-start: 0em;
         margin-block-end: 0em;
         color: @general-font-color;
     }
+}
 
+// Strong
+.markdown-preview.markdown-preview {
     strong {
         color: inherit;
     }
+}
 
-
-    /*#region Header Tags */
-
+// Header Tags
+.markdown-preview.markdown-preview {
     h {
         //  h1, h2, h3, h4, h5, h6
         &1, &2, &3, &4, &5, &6 {
@@ -150,11 +163,10 @@ html, body {
             font-size: @h6-font-size;
         }
     }
+}
 
-    /*#endregion Header Tags */
-
-    /*#region Lists Tags */
-
+// Lists Tags
+.markdown-preview.markdown-preview {
     ul > li {
         font-size: @general-font-size;
         color: @general-font-color;
@@ -163,13 +175,11 @@ html, body {
     ol > li {
         font-size: @general-font-size;
         color: @general-font-color;
-        // color: red;
     }
+}
 
-    /*#endregion Lists Tags */
-
-    /*#region Table Tags */
-
+// Table Tags
+.markdown-preview.markdown-preview {
     tr {
         //  tr > td
         & > td {
@@ -193,167 +203,41 @@ html, body {
             border-left-width: 0px;
         }
     }
+}
 
-    /*#endregion Table Tags */
+// Presentation Slides
+.markdown-preview.markdown-preview {
+    .slide {
+        top: 0px;
+        height: 100%;
 
-
-    /*#region Presentation Slides */
-
-    // .slide {
-    //     align-self: ;
-    // }
-
-    /*#endregion Presentation Slides */
-
-
-
-
-
-    /*#region Code Tags */
-
-
-
-    pre {
-        font-size: @general-font-size !important;
-        background-color: @background-body;
-        color: @general-font-color;
-        position: relative;
-        // border: thin solid @code-border-color;
-        max-height: 500px;
-        // overflow-y: auto;
-        overflow-y: auto;
-        // overflow-y: hidden;
-
-        // padding-bottom: 0px;
-        margin-top: 5px;
-
-        margin-bottom: 0px;
-     
-        // transition: overflow-y 1s 0.5s;
-
-        
-      
-
-        &[code-collapsed=true] {
-            max-height: calc(@code-top-size * 2.5);
-            overflow-y: hidden;
-            padding-top: 0px;
-            padding-bottom: 0px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            transition: all 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
-
-            visibility: hidden;
-
-            // & > *:not(button) {
-            //     visibility: hidden;
-            //     transition: all 0.6s;
-            // }
-        }
-        
-        &:not([code-collapsed=true]) {
-            padding-top: calc(@code-top-size * 3);
-            transition: all 0.5s;
-            visibility: visible;
-
-            animation: hide-scroll 0.5s backwards;
-            @keyframes hide-scroll {
-                from, to { overflow: hidden; } 
+        code {
+            border-radius: 3px;
+            
+            &::before {
+                letter-spacing: -0.2em;
+                content: "\00a0";
             }
 
-            &::-webkit-scrollbar-thumb {
-                // border-radius: 5px;
-                background-color: rgba(119, 118, 118, 0.493);
-                border: 4px solid rgba(119, 118, 118, 0.493);
-                background-clip: content-box;
-
-                &:hover {
-                    background-color: rgba(150,150,150,0.66);
-                    border: 4px solid rgba(150,150,150,0.66);
-                    transition: all 1s;
-                }
-            }
-
-            &::-webkit-scrollbar-track {
-                // border-radius: 10px;
-                background-color: transparent;
-                // background-color: red;
-
-                &:vertical {
-                    margin-top: calc(@code-top-size * 2);
-                }
-
-            }
-
-            &::-webkit-scrollbar {
-                width: 8px;
-                height: 8px;
-            }
-
-            ::-webkit-scrollbar-button {
-                width: 0;
-                height: 0;
-                display: none;
-            }
-
-            ::-webkit-scrollbar-corner {
-                background-color: transparent;
+            &::after {
+                letter-spacing: -0.2em;
+                content: "\00a0";
             }
         }
 
-        & > span {
-            font-size: @general-font-size !important;
-            letter-spacing: 0px;
-            color: @general-font-color;
+        hr {
+            height: 0px !important;
         }
 
-        & > code {
-            font-size: @general-font-size !important;
-            letter-spacing: 0px;
-            color: @general-font-color;
-        }
-
-        & .line-numbers-rows {
-            top: calc(@code-top-size * 3);
-        }
-
-
-        &[data-line] .line-highlight {
-            background: @code-highlight-color;
-            margin-top: calc(@code-top-size * 3);
-
-
-            &[data-end]:after {
-                content: none;
-            }
-
-            &:before {
-                content: none;
-            }
+        pre {
+            text-shadow: none;
+            width: inherit;
         }
     }
+}
 
-    code {
-        font-size: @general-font-size !important;
-        color: @code-text-color;
-        background-color: @background-body;
-        letter-spacing: 0px;
-    }
-
-
-    
-    .token {
-        background-color: transparent;
-    }
-
-    /*#endregion Code Tags */
-
-    hr {
-        margin: 20px 0;
-        height: 2px;
-        background-color: @divider-color;
-    }
-
+// Links
+.markdown-preview.markdown-preview {
     a {
         text-decoration: none;
         transition: 1s;
@@ -363,13 +247,157 @@ html, body {
             text-decoration-color: turquoise;
             transition: 1s;
         }
-
     }
 }
 
+// Horizontal Rule
+.markdown-preview.markdown-preview {
+    hr {
+        margin: 20px 0;
+        height: 2px;
+        background-color: @divider-color;
+    }
+}
+
+// // Code Tags
+// .markdown-preview.markdown-preview {
+//     pre {
+//         font-size: @general-font-size !important;
+//         background-color: @background-body;
+//         color: @general-font-color;
+//         position: relative;
+//         // border: thin solid @code-border-color;
+//         max-height: 500px;
+//         // overflow-y: auto;
+//         overflow-y: auto;
+//         // overflow-y: hidden;
+
+//         // padding-bottom: 0px;
+//         margin-top: 5px;
+
+//         margin-bottom: 0px;
+     
+//         // transition: overflow-y 1s 0.5s;
+
+        
+      
+
+//         &[code-collapsed=true] {
+//             max-height: calc(@code-top-size * 2.5);
+//             overflow-y: hidden;
+//             padding-top: 0px;
+//             padding-bottom: 0px;
+//             margin-top: 0px;
+//             margin-bottom: 0px;
+//             transition: all 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+//             visibility: hidden;
+
+//             // & > *:not(button) {
+//             //     visibility: hidden;
+//             //     transition: all 0.6s;
+//             // }
+//         }
+        
+//         &:not([code-collapsed=true]) {
+//             padding-top: calc(@code-top-size * 3);
+//             transition: all 0.5s;
+//             visibility: visible;
+
+//             animation: hide-scroll 0.5s backwards;
+//             @keyframes hide-scroll {
+//                 from, to { overflow: hidden; } 
+//             }
+
+//             &::-webkit-scrollbar-thumb {
+//                 // border-radius: 5px;
+//                 background-color: rgba(119, 118, 118, 0.493);
+//                 border: 4px solid rgba(119, 118, 118, 0.493);
+//                 background-clip: content-box;
+
+//                 &:hover {
+//                     background-color: rgba(150,150,150,0.66);
+//                     border: 4px solid rgba(150,150,150,0.66);
+//                     transition: all 1s;
+//                 }
+//             }
+
+//             &::-webkit-scrollbar-track {
+//                 // border-radius: 10px;
+//                 background-color: transparent;
+//                 // background-color: red;
+
+//                 &:vertical {
+//                     margin-top: calc(@code-top-size * 2);
+//                 }
+
+//             }
+
+//             &::-webkit-scrollbar {
+//                 width: 8px;
+//                 height: 8px;
+//             }
+
+//             ::-webkit-scrollbar-button {
+//                 width: 0;
+//                 height: 0;
+//                 display: none;
+//             }
+
+//             ::-webkit-scrollbar-corner {
+//                 background-color: transparent;
+//             }
+//         }
+
+//         & > span {
+//             font-size: @general-font-size !important;
+//             letter-spacing: 0px;
+//             color: @general-font-color;
+//         }
+
+//         & > code {
+//             font-size: @general-font-size !important;
+//             letter-spacing: 0px;
+//             color: @general-font-color;
+//         }
+
+//         & .line-numbers-rows {
+//             top: calc(@code-top-size * 3);
+//         }
 
 
-/*#region TOC */
+//         &[data-line] .line-highlight {
+//             background: @code-highlight-color;
+//             margin-top: calc(@code-top-size * 3);
+
+
+//             &[data-end]:after {
+//                 content: none;
+//             }
+
+//             &:before {
+//                 content: none;
+//             }
+//         }
+//     }
+
+//     code {
+//         font-size: @general-font-size !important;
+//         color: @code-text-color;
+//         background-color: @background-body;
+//         letter-spacing: 0px;
+//     }
+    
+//     .token {
+//         background-color: transparent;
+//     }
+// }
+
+/*#endregion Markdown Body */
+
+
+
+/*#region ToC */
 
 .md-sidebar-toc {
     & ul li a {
@@ -394,12 +422,6 @@ html, body {
         }
     }
 }
-
-// .md-sidebar-toc ul:hover li:hover a:hover {
-//     color: @header-font-color;
-//     text-decoration: underline;
-//     text-decoration-color: #42b983;
-// }
 
 
 html body[for="html-export"]:not([data-presentation-mode]) {
@@ -524,7 +546,9 @@ html body[for="html-export"]:not([data-presentation-mode]) {
 }
 
 
-/*#endregion TOC */
+/*#endregion ToC */
+
+
 
 
 
@@ -581,68 +605,69 @@ html body[for="html-export"]:not([data-presentation-mode]) {
 }
 
 
-/*#endregion Custom Classes */
+.code-button {
+ z-index: 2;
+ content: attr(code-language);
+ position: absolute;
+ cursor: pointer;
+ top: 0px;
+ left: 0px;
+ right:0px;
+ bottom:0px;
+ height: calc(@code-top-size * 2.5);
+ width: 100%;
+ display: block;
+ margin: 0;
+ overflow: hidden;
+ border-width: 0;
+ outline: none;
+ border-radius: 2px;
+ box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+ 
+ // background-color: #2ecc71;
+ background-color: darken(@background-general, 5%);
+ color: #ecf0f1;
+ transition: background-color .3s;
 
-   //  Custom class injected with javascript
-   .code-button {
-    z-index: 2;
-    content: attr(code-language);
-    position: absolute;
-    cursor: pointer;
-    top: 0px;
-    left: 0px;
-    right:0px;
-    bottom:0px;
-    height: calc(@code-top-size * 2.5);
-    width: 100%;
-    display: block;
-    margin: 0;
-    overflow: hidden;
-    border-width: 0;
-    outline: none;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
-    
-    // background-color: #2ecc71;
-    background-color: darken(@background-general, 5%);
-    color: #ecf0f1;
-    transition: background-color .3s;
+ //  , &:focus
+ &:hover {
+     // background-color: #27ae60;
+     background-color: darken(@background-general, 2.5%);
+ }
 
-    //  , &:focus
-    &:hover {
-        // background-color: #27ae60;
-        background-color: darken(@background-general, 2.5%);
-    }
+ & span {
+     display: block;
+     padding: 12px 24px;
+ }
 
-    & span {
-        display: block;
-        padding: 12px 24px;
-    }
-
-    &::after {
-        width: calc(@code-top-size * 2);
-        height: calc(@code-top-size * 2);
-        display: block;
-        left: 0px;
-        content: '';
-        -webkit-mask: url(@code-expand-icon) no-repeat 0% 0%;
-        mask: url(@code-expand-icon) no-repeat 0% 0%;
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        background-color: @general-font-color;
-        transition-duration: 0.35s;
-        transition-timing-function: ease-out;
-    }
+ &::after {
+     width: calc(@code-top-size * 2);
+     height: calc(@code-top-size * 2);
+     display: block;
+     left: 0px;
+     content: '';
+     -webkit-mask: url(@code-expand-icon) no-repeat 0% 0%;
+     mask: url(@code-expand-icon) no-repeat 0% 0%;
+     -webkit-mask-size: cover;
+     mask-size: cover;
+     background-color: @general-font-color;
+     transition-duration: 0.35s;
+     transition-timing-function: ease-out;
+ }
 }
 
 
+/*#endregion Custom Classes */
 
 
 
-/*region Mermaid Diagram */
 
 
-/*region Mermaid Diagram - Class Diagram */
+
+
+/*#region Mermaid Diagram */
+
+/*#region Mermaid Diagram - Class Diagram */
 
 
 // .classGroup {
@@ -706,8 +731,6 @@ g.classGroup text {
     // }
 }
 
-
-
 // .classGroup .title{
 //     // margin: 5px !important;
 //     // padding: 5px !important;
@@ -744,11 +767,9 @@ g.classGroup line{
 // }
 
 
-/*endregion Mermaid Diagram - Class Diagram */
+/*#endregion Mermaid Diagram - Class Diagram */
 
-
-
-/*region Mermaid Diagram - Entity Diagram */
+/*#region Mermaid Diagram - Entity Diagram */
 
 .entityBox {
     // fill: @background-body !important;
@@ -762,7 +783,6 @@ g.classGroup line{
     font-size: calc(@general-font-size + 0.1rem) !important;
     color: @general-font-color !important;
     fill: @general-font-color !important;
-
 
 }
 
@@ -786,9 +806,9 @@ g.classGroup line{
     fill: darken(@background-general, 2.5%) !important;
 }
 
-/*endregion Mermaid Diagram - Entity Diagram */
+/*#endregion Mermaid Diagram - Entity Diagram */
 
-/*region Mermaid Diagram - Flow Diagram */
+/*#region Mermaid Diagram - Flow Diagram */
 
 .node {
 
@@ -823,1027 +843,547 @@ g.classGroup line{
 
 }
 
-/*endregion Mermaid Diagram - Flow Diagram */
+/*#endregion Mermaid Diagram - Flow Diagram */
 
-/*endregion Mermaid Diagram */
+/*#endregion Mermaid Diagram */
 
 
-.slide {
-    top: 0px;
-    height: 100%;
 
-    // top: 0px !important;
-    // height: 100% !important;
+// /*#region Presentation Slides */
 
-    code {
-        // border-radius: 3px !important;
-        border-radius: 3px;
+
+// .slide {
+//     top: 0px;
+//     height: 100%;
+
+//     // top: 0px !important;
+//     // height: 100% !important;
+
+//     code {
+//         // border-radius: 3px !important;
+//         border-radius: 3px;
         
-        &::before {
-            letter-spacing: -0.2em;
-            content: "\00a0";
-        }
+//         &::before {
+//             letter-spacing: -0.2em;
+//             content: "\00a0";
+//         }
 
-        &::after {
-            letter-spacing: -0.2em;
-            content: "\00a0";
-        }
+//         &::after {
+//             letter-spacing: -0.2em;
+//             content: "\00a0";
+//         }
 
-    }
+//     }
 
-    hr {
-        height: 0px !important;
-    }
+//     hr {
+//         height: 0px !important;
+//     }
 
-    pre {
-        text-shadow: none;
-        width: inherit;
+//     pre {
+//         text-shadow: none;
+//         width: inherit;
 
-        // margin: .5em 0;
-    }
+//         // margin: .5em 0;
+//     }
 
   
-}
+// }
+
+
+// /*#endregion Presentation Slides */
 
 
 
+/*#region Code Blocks */
 
+// Base
 pre[data-role="codeBlock"] {
-
-    &[class~="language-csharp"] {
-            
-        // &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        .keyword {
-            color: @token-keyword;
-        }
-
-        .comment, .prolog, .doctype, .cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        .string {
-            color: @token-string;
-        }
-
-        .number {
-            color: @token-number;
-        }
-
-        .unit {
-            color: @token-number;
-        }
-
-
-        .operator {
-            color: #B2B2B2;
-            // background-color: transparent;
-        }
-
-        .tag {
-            color: @token-keyword;
-
-            & > .punctuation {
-                // color: @token-comment;
-                // color: @token-punctuation;
-                color: #B2B2B2;
-            }
-        }
-
-        .punctuation {
-            color: @token-punctuation;
-        }
-
-        .color {
-            color: @token-string;
-        }
-
-
-        .class-name {
-            color: @token-class;
-        }
-        
-        .generic.class-name {
-            color: @token-genericclass;
-        }
-
-        .property-access{
-            // color: @token-string;
-            color: @token-property;
-        }
-
-        .method {
-            color: @token-method;
-        }
-
-        .function {
-            color: @token-function;
-        }
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-        // &.variable {
-        //     color: #4EC9B0;
-        // }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-      
-        .property {
-            color: @token-property;
-        }
-
-        .selector {
-            color: @token-selector;
-        }
-
-        .boolean {
-            color: @token-boolean;
-        }
-
-
-        .attr-name {
-            color: @token-attrname;
-        }
-
-        .attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        .interpolation {
-            & > .punctuation{
-                color: @token-punctuation;
-            }
-
-            // & > .expression{
-            //     color: @token-property;
-            // }
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
-        // }
-
-    }
-
-    &[class="language-javascript"] {
-        
-// &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        .keyword {
-            color: @token-keyword;
-        }
-
-        .comment, .prolog, .doctype, .cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        .string {
-            color: @token-string;
-        }
-
-        .number {
-            color: @token-number;
-        }
-
-        .unit {
-            color: @token-number;
-        }
-
-
-        .operator {
-            color: #B2B2B2;
-            // background-color: transparent;
-        }
-
-        .punctuation {
-            color: @token-punctuation;
-        }
-
-        .color {
-            color: @token-string;
-        }
-
-
-        .class-name {
-            color: @token-class;
-        }
-        
-        .generic.class-name {
-            color: #B8D7A3
-        }
-        
-        .method {
-            color: @token-method;
-        }
-
-        .function {
-            color: @token-function;
-        }
-
-        .property-access{
-            // color: @token-string;
-            // color: @token-property;
-            color: inherit;
-        }
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-        // &.variable {
-        //     color: #4EC9B0;
-        // }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-        
-        .property {
-            color: @token-property;
-        }
-
-        .selector {
-            color: @token-selector;
-        }
-
-        .boolean {
-            color: @token-boolean;
-        }
-
-
-        .attr-name {
-            color: @token-attrname;
-        }
-
-        .attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
+    font-size: @general-font-size !important;
+    background-color: @background-body;
+    color: @general-font-color;
+    position: relative;
+    // border: thin solid @code-border-color;
+    max-height: 500px;
+    // overflow-y: auto;
+    overflow-y: auto;
+    // overflow-y: hidden;
+
+    // padding-bottom: 0px;
+    margin-top: 5px;
+
+    margin-bottom: 0px;
+ 
+    // transition: overflow-y 1s 0.5s;
+
+    &[code-collapsed=true] {
+        max-height: calc(@code-top-size * 2.5);
+        overflow-y: hidden;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        transition: all 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+        visibility: hidden;
+
+        // & > *:not(button) {
+        //     visibility: hidden;
+        //     transition: all 0.6s;
         // }
     }
-
-
-    &[class="language-sql"] {
-        
-        // &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        .keyword {
-            color: @token-keyword;
-        }
-
-        .comment, .prolog, .doctype, .cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        .string {
-            color: @token-string;
-        }
-
-        .number {
-            color: @token-number;
-        }
-
-        .unit {
-            color: @token-number;
-        }
-
-
-        .operator {
-            color: #B2B2B2;
-            // background-color: transparent;
-        }
-
-        .punctuation {
-            color: @token-punctuation;
-        }
-
-        .color {
-            color: @token-string;
-        }
-
-
-        .class-name {
-            color: @token-class;
-        }
-        
-        .generic.class-name {
-            color: #B8D7A3
-        }
-
-
-        .method {
-            color: @token-method;
-        }
-
-        .function {
-            color: @token-function;
-        }
-
-        .property-access{
-            // color: @token-string;
-            // color: @token-property;
-            color: inherit;
-        }
-
-        .variable {
-            // color: #4EC9B0;
-            color: @token-property;
-        }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-        
-        .property {
-            color: @token-property;
-        }
-
-        .selector {
-            color: @token-selector;
-        }
-
-        .boolean {
-            color: @token-boolean;
-        }
-
-
-        .attr-name {
-            color: @token-attrname;
-        }
-
-        .attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
-        // }
-    }
-
-    &[class="language-scss"] {
-        
-        // &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        .keyword {
-            color: @token-keyword;
-        }
-
-        .comment, .prolog, .doctype, .cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        .string {
-            color: @token-string;
-        }
-
-        .number {
-            color: @token-number;
-        }
-
-        .unit {
-            color: @token-number;
-        }
-
-
-        .operator {
-            color: #B2B2B2;
-            // background-color: transparent;
-        }
-
-        .punctuation {
-            color: @token-punctuation;
-        }
-
-        .color {
-            // color: @token-string;
-            color: @general-font-color;
-
-            & > .function {
-                // @token-method: #DD4A68;
-                // color: @token-method;
-                color: @general-font-color;
-            }
-        }
-
-
-        // .class-name {
-        //     color: @token-class;
-        // }
-        
-        // .generic.class-name {
-        //     color: #B8D7A3
-        // }
-
-        
-
-        // .method {
-        //     // @token-method: #DD4A68;
-        //     // color: @token-method;
-        //     color: #D3FA7E;
-        // }
-
-        .function {
-            // @token-method: #DD4A68;
-            // color: @token-method;
-            color: @general-font-color;
-        }
-        
-        
-        .property-access{
-            // color: @token-string;
-            // color: @token-property;
-            color: @general-font-color;
-        }
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-      
-        .variable {
-            // color: #4EC9B0;
-            color: @token-property;
-        }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-        
-        .property {
-            color: @token-property;
-        }
-
-        .selector {
-            color: @token-selector;
-        }
-
-        .boolean {
-            color: @token-boolean;
-        }
-
-
-        .attr-name {
-            color: @token-attrname;
-        }
-
-        .attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
-        // }
-    }
-
-    &[class="language-less"] {
-        
-        // &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        .keyword {
-            color: @token-keyword;
-        }
-
-        .comment, .prolog, .doctype, .cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        .string {
-            color: @token-string;
-        }
-
-        .number {
-            color: @token-number;
-        }
-
-        .unit {
-            color: @token-number;
-        }
-
-
-        .operator {
-            color: #B2B2B2;
-            // background-color: transparent;
-        }
-
-        .punctuation {
-            color: @token-punctuation;
-        }
-
-        .color {
-            // color: @token-string;
-            color: @general-font-color;
-
-            & > .function {
-                // @token-method: #DD4A68;
-                // color: @token-method;
-                color: @general-font-color;
-            }
-        }
-
-
-        // .class-name {
-        //     color: @token-class;
-        // }
-        
-        // .generic.class-name {
-        //     color: #B8D7A3
-        // }
-
-        
-
-        // .method {
-        //     // @token-method: #DD4A68;
-        //     // color: @token-method;
-        //     color: #D3FA7E;
-        // }
-
-        .function {
-            // @token-method: #DD4A68;
-            // color: @token-method;
-            color: @general-font-color;
-        }
-        
-        
-        .property-access{
-            // color: @token-string;
-            // color: @token-property;
-            color: @general-font-color;
-        }
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-      
-        .variable {
-            // color: #4EC9B0;
-            color: @token-property;
-        }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-        
-        .property {
-            color: @token-property;
-        }
-
-        .selector {
-            color: @token-selector;
-        }
-
-        .boolean {
-            color: @token-boolean;
-        }
-
-
-        .attr-name {
-            color: @token-attrname;
-        }
-
-        .attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
-        // }
-    }
-
-    &[class="language-html"] {
-        
-        // &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
-
-        // .token {
-        //     tab-size: 1 !important;
-        // }
-
-        //  &.arrow {
-
-        //}
-
-        .id {
-            color: @token-selector;
-        }
-
-        .tag {
-            color: @token-keyword;
-
-            & > .attr-name {
-                color: @token-attrvalue;
-
-                & > .namespace {
-                    color: @token-attrvalue;
-                }
-            }
     
+    &:not([code-collapsed=true]) {
+        padding-top: calc(@code-top-size * 3);
+        transition: all 0.5s;
+        visibility: visible;
 
-            & > .attr-value {
-                color: @token-attrname;
-            }
-
-            
-            // & > .attr-value {
-            //     color: @token-string;
-            // }
+        animation: hide-scroll 0.5s backwards;
+        @keyframes hide-scroll {
+            from, to { overflow: hidden; } 
         }
 
-        .keyword {
-            color: @token-keyword;
-        }
+        &::-webkit-scrollbar-thumb {
+            // border-radius: 5px;
+            background-color: rgba(119, 118, 118, 0.493);
+            border: 4px solid rgba(119, 118, 118, 0.493);
+            background-clip: content-box;
 
-        .comment, .prolog, .doctype, .cdata {
-            color: @token-comment;
-            font-style: italic;
-        }
-
-        .string {
-            color: @token-string;
-        }
-
-        .number {
-            color: @token-number;
-        }
-
-        .unit {
-            color: @token-number;
-        }
-
-
-        .operator {
-            color: #B2B2B2;
-        }
-
-        .punctuation {
-            color: @token-punctuation;
-        }
-
-        .color {
-            // color: @token-string;
-            color: @general-font-color;
-
-            & > .function {
-                // @token-method: #DD4A68;
-                // color: @token-method;
-                color: @general-font-color;
+            &:hover {
+                background-color: rgba(150,150,150,0.66);
+                border: 4px solid rgba(150,150,150,0.66);
+                transition: all 1s;
             }
         }
 
+        &::-webkit-scrollbar-track {
+            // border-radius: 10px;
+            background-color: transparent;
+            // background-color: red;
 
-        // .class-name {
-        //     color: @token-class;
-        // }
-        
-        // .generic.class-name {
-        //     color: #B8D7A3
-        // }
-
-        
-
-        // .method {
-        //     // @token-method: #DD4A68;
-        //     // color: @token-method;
-        //     color: #D3FA7E;
-        // }
-
-        .function {
-            // @token-method: #DD4A68;
-            // color: @token-method;
-            color: @general-font-color;
-        }
-        
-        
-        .property-access{
-            // color: @token-string;
-            // color: @token-property;
-            color: @general-font-color;
-        }
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-      
-        .variable {
-            // color: #4EC9B0;
-            color: @token-property;
-        }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-        .dom.variable {
-            color: @general-font-color
-        }
-
-        .property {
-            color: @token-property;
-        }
-
-        .selector {
-            color: @token-selector;
-
-            & > .class {
-                color: @token-selector;
+            &:vertical {
+                margin-top: calc(@code-top-size * 2);
             }
+
         }
 
-        .pseudo-class, .important, .rule {
-            color: @token-keyword;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
         }
 
-        .pseudo-element {
-            color: @token-selector;
+        ::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
         }
 
-        .boolean {
-            color: @token-boolean;
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
         }
-
-
-        .attr-name {
-            color: @token-attrname;
-        }
-
-        .attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        // .url {
-        //   color: @token-keyword;
-        // }
     }
 
-    &[class~="language-json"] {
-            
-        // &.class-name > .keyword {
-        //     color: #46AF99;
-        // }
+    & > span {
+        font-size: @general-font-size !important;
+        letter-spacing: 0px;
+        color: @general-font-color;
+    }
 
-        // .token {
-        //     tab-size: 1 !important;
-        // }
+    & > code {
+        font-size: @general-font-size !important;
+        letter-spacing: 0px;
+        color: @general-font-color;
+    }
 
-        //  &.arrow {
+    & .line-numbers-rows {
+        top: calc(@code-top-size * 3);
+    }
 
-        //}
 
-        .keyword {
-            color: @token-keyword;
+    &[data-line] .line-highlight {
+        background: @code-highlight-color;
+        margin-top: calc(@code-top-size * 3);
+
+
+        &[data-end]:after {
+            content: none;
         }
 
-        .comment, .prolog, .doctype, .cdata {
-            color: @token-comment;
-            font-style: italic;
+        &:before {
+            content: none;
         }
-
-        .string {
-            color: @token-string;
-        }
-
-        .number {
-            color: @token-number;
-        }
-
-        .unit {
-            color: @token-number;
-        }
+    }
 
 
-        .operator {
+    .token {
+        background-color: transparent;
+    }
+    
+    .keyword {
+        color: @token-keyword;
+    }
+    
+    .comment, .prolog, .doctype, .cdata {
+        color: @token-comment;
+        font-style: italic;
+    }
+    
+    .string {
+        color: @token-string;
+    }
+    
+    .number {
+        color: @token-number;
+    }
+    
+    .unit {
+        color: @token-number;
+    }
+    
+    .color {
+        color: @token-string;
+    }
+    
+    .operator {
+        color: #B2B2B2;
+    }
+    
+    .punctuation {
+        color: @token-punctuation;
+    }
+    
+    .property {
+        color: @token-property;
+    }
+    
+    .generic.class-name {
+        color: @token-genericclass;
+    }
+    
+    .class-name {
+        color: @token-class;
+    }
+    
+    .boolean {
+        color: @token-boolean;
+    }
+    
+    .selector {
+        color: @token-selector;
+    }
+    
+    .method {
+        color: @token-method;
+    }
+    
+    .function {
+        color: @token-function;
+    }
+    
+    .attr-name {
+        color: @token-attrname;
+    }
+    
+    .attr-value {
+        color: @token-attrvalue;
+    }
+
+    .tag {
+        color: @token-keyword;
+
+        & > .punctuation {
+            // color: @token-comment;
+            // color: @token-punctuation;
             color: #B2B2B2;
-            // background-color: transparent;
         }
+    }
 
-        .tag {
-            color: @token-keyword;
+}
 
-            & > .punctuation {
-                // color: @token-comment;
-                // color: @token-punctuation;
-                color: #B2B2B2;
-            }
+.markdown-preview.markdown-preview code {
+    // font-size: @general-font-size !important;
+    color: @code-text-color;
+    // background-color: @background-body;
+    background-color: darken(@background-general, 5%);
+    letter-spacing: 0px;
+}
+
+
+// // Default
+// pre[data-role="codeBlock"][class="language-"] {
+//     // .keyword {
+//     //     color: @token-keyword;
+//     // }
+
+//     // .comment, .prolog, .doctype, .cdata {
+//     //     color: @token-comment;
+//     //     font-style: italic;
+//     // }
+    
+//     .string {
+//         color: @token-string;
+//     }
+
+//     .number {
+//         color: @token-number;
+//     }
+
+//     .unit {
+//         color: @token-number;
+//     }
+
+//     .operator {
+//         color: #B2B2B2;
+//     }
+
+//     .tag {
+//         color: @token-keyword;
+
+//         & > .punctuation {
+//             color: #B2B2B2;
+//         }
+//     }
+
+//     .punctuation {
+//         color: @token-punctuation;
+//     }
+
+//     .color {
+//         color: @token-string;
+//     }
+
+//     .class-name {
+//         color: @token-class;
+//     }
+    
+//     .generic.class-name {
+//         color: @token-genericclass;
+//     }
+
+//     .property-access{
+//         color: @token-property;
+//     }
+
+//     .method {
+//         color: @token-method;
+//     }
+
+//     .function {
+//         color: @token-function;
+//     }
+    
+//     .property {
+//         color: @token-property;
+//     }
+
+//     .selector {
+//         color: @token-selector;
+//     }
+
+//     .boolean {
+//         color: @token-boolean;
+//     }
+
+
+//     .attr-name {
+//         color: @token-attrname;
+//     }
+
+//     .attr-value {
+//         color: @token-attrvalue;
+//     }
+
+//     .interpolation {
+//         & > .punctuation{
+//             color: @token-punctuation;
+//         }
+//     }
+// }
+
+// CSharp
+pre[data-role="codeBlock"][class~="language-csharp"] {
+    .tag {
+        color: @token-keyword;
+
+        & > .punctuation {
+            // color: @token-comment;
+            // color: @token-punctuation;
+            color: #B2B2B2;
         }
+    }
 
-        .punctuation {
-            color: @token-punctuation;
-        }
+    .property-access{
+        color: @token-property;
+    }
 
-        .color {
-            color: @token-string;
-        }
+    // .interpolation {
+    //     & > .punctuation{
+    //         color: @token-punctuation;
+    //     }
+    // }
+}
 
-
-        .class-name {
-            color: @token-class;
-        }
-        
-        .generic.class-name {
-            color: @token-genericclass;
-        }
-
-        .property-access{
-            // color: @token-string;
-            color: @token-property;
-        }
-
-        .method {
-            color: @token-method;
-        }
-
-        .function {
-            color: @token-function;
-        }
-
-        // &.function {
-        //     color: #46AF99;
-        // }
-
-        // &.variable {
-        //     color: #4EC9B0;
-        // }
-
-
-        //  &.keyword, 
-        // &.control-flow {
-        //     @token-controlflow: #DD4A68;
-        //     color: @token-controlflow;
-        // }
-
-        // &.dom {
-        //     @token-dom: #e90;
-        //     color: @token-dom;
-        // }
-
-      
-        .property {
-            color: @token-property;
-        }
-
-        .selector {
-            color: @token-selector;
-        }
-
-        .boolean {
-            color: @token-boolean;
-        }
-
-
-        .attr-name {
-            color: @token-attrname;
-        }
-
-        .attr-value {
-            color: @token-attrvalue;
-        }
-
-
-        .interpolation {
-            & > .punctuation{
-                color: @token-punctuation;
-            }
-
-            // & > .expression{
-            //     color: @token-property;
-            // }
-        }
-
-
-        // &.url {
-        //   color: @token-keyword;
-        // }
-
+// Javascript
+pre[data-role="codeBlock"][class~="language-javascript"] {
+    .property-access{
+        color: inherit;
     }
 }
+
+// SQL
+pre[data-role="codeBlock"][class~="language-sql"] {
+    .unit {
+        color: @token-number;
+    }
+
+    .property-access{
+        color: inherit;
+    }
+
+    .variable {
+        color: @token-property;
+    }
+}
+
+// SCSS
+pre[data-role="codeBlock"][class~="language-scss"] {
+    .color {
+        color: @general-font-color;
+
+        & > .function {
+            color: @general-font-color;
+        }
+    }
+
+    .function {
+        color: @general-font-color;
+    }
+    
+    .property-access{
+        color: @general-font-color;
+    }
+
+    .variable {
+        color: @token-property;
+    }
+}
+
+// LESS
+pre[data-role="codeBlock"][class~="language-less"] {
+    .color {
+        color: @general-font-color;
+
+        & > .function {
+            color: @general-font-color;
+        }
+    }
+
+    .function {
+        color: @general-font-color;
+    }
+    
+    .property-access{
+        color: @general-font-color;
+    }
+
+    .variable {
+        color: @token-property;
+    }
+
+    .property {
+        color: @token-property;
+    }
+}
+
+// HTML
+pre[data-role="codeBlock"][class~="language-html"] {
+    .id {
+        color: @token-selector;
+    }
+
+    .tag {
+        color: @token-keyword;
+
+        & > .attr-name {
+            color: @token-attrvalue;
+
+            & > .namespace {
+                color: @token-attrvalue;
+            }
+        }
+
+
+        & > .attr-value {
+            color: @token-attrname;
+        }
+    }
+
+    .color {
+        color: @general-font-color;
+
+        & > .function {
+            color: @general-font-color;
+        }
+    }
+
+    .function {
+        color: @general-font-color;
+    }
+    
+    .property-access{
+        color: @general-font-color;
+    }
+
+    .variable {
+        color: @token-property;
+    }
+
+    .dom.variable {
+        color: @general-font-color
+    }
+
+    .selector {
+        color: @token-selector;
+
+        & > .class {
+            color: @token-selector;
+        }
+    }
+
+    .pseudo-class, .important, .rule {
+        color: @token-keyword;
+    }
+
+    .pseudo-element {
+        color: @token-selector;
+    }
+}
+
+// JSON
+pre[data-role="codeBlock"][class~="language-json"] {
+    .tag {
+        color: @token-keyword;
+
+        & > .punctuation {
+            color: #B2B2B2;
+        }
+    }
+
+    .property-access{
+        color: @token-property;
+    }
+
+    .property {
+        color: @token-property;
+    }
+
+    // .interpolation {
+    //     & > .punctuation{
+    //         color: @token-punctuation;
+    //     }
+    // }
+}
+
+
+
+/*#endregion Code Blocks */
+
