@@ -104,22 +104,42 @@ html, body {
     background-color: @background-general;
 }
 
+// // Paragraphs
+// .markdown-preview.markdown-preview {
+//     p {
+//         font-size: @general-font-size;
+//         margin-block-start: 0em;
+//         margin-block-end: 0em;
+//         color: @general-font-color;
+//     }
+// }
+
 // Paragraphs
-.markdown-preview.markdown-preview {
-    p {
-        font-size: @general-font-size;
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-        color: @general-font-color;
-    }
+.markdown-preview.markdown-preview p {
+    font-size: @general-font-size;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: @general-font-color;
 }
 
-// Strong
-.markdown-preview.markdown-preview {
-    strong {
-        color: inherit;
-    }
+.markdown-preview.markdown-preview a code {
+    color: #08c !important;
 }
+
+
+// Strong
+.markdown-preview.markdown-preview strong {
+    color: inherit;
+}
+
+
+// // Strong
+// .markdown-preview.markdown-preview {
+//     strong {
+//         color: inherit;
+//     }
+// }
+
 
 // Header Tags
 .markdown-preview.markdown-preview {
