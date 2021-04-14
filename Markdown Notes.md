@@ -326,6 +326,18 @@ https://shd101wyy.github.io/markdown-preview-enhanced/#/pandoc
 
 ---
 
+# Abbreviations
+
+*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
+
+The HTML specification
+is maintained by the W3C.
+
+
+---
+
+
 # Importing Files
 
 * [Reference](https://shd101wyy.github.io/markdown-preview-enhanced/#/file-imports)
@@ -391,6 +403,7 @@ https://shd101wyy.github.io/markdown-preview-enhanced/#/pandoc
 
 Documentation: https://github.com/mermaid-js/mermaid
 
+https://mermaid-js.github.io/mermaid/#/
 
 
 ### Simple Example
