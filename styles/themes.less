@@ -1,0 +1,169 @@
+.theme(dark) {
+    @font-face {
+      font-family: Roboto;
+      src: url("https://fonts.googleapis.com/css?family=Roboto");
+    }
+    @background-body: #161616;
+    @background-general: #292929;
+    @general-font-color: #d4d4d4;
+    @header-font-color: #ededed;
+    @divider-color: #474747;
+    @border-color: #696969;
+    @link-hover-color: #40e0d0;
+    @code-max-block-height: 400px;
+    @code-border-color: #3f3e3e;
+    @code-text-color: #d1d1d1;
+    @code-top-size: 0.8rem;
+    @diagram-node-background: darken(@background-general, 5%);
+    @code-highlight-color: linear-gradient(
+      to right,
+      hsla(0, 0%, 95%, 0.15) 50%,
+      hsla(0, 0%, 95%, 0)
+    );
+    @token-property: #9cdcfe;
+    @token-keyword: #5190c5;
+    @token-comment: #6a9955;
+    @token-string: #ce9178;
+    @token-number: #b8d7a3;
+    @token-punctuation: #bdbdbd;
+    @token-selector: #d7ba7d;
+    @token-boolean: @token-keyword;
+    @token-class: #4ec9b0;
+    @token-genericclass: #b8d7a3;
+    @token-method: #ffff9f;
+    @token-function: #ffff9f;
+    @token-attrname: #c8c8c8;
+    @token-attrvalue: @token-property;
+    @code-expand-icon: "https://fonts.gstatic.com/s/i/materialicons/expand_more/v12/24px.svg";
+    @general-font-size: 0.85rem;
+    @toc-left-padding-half: 457px;
+    @toc-expanded-width: 400px;
+    @toc-background: linear-gradient(
+        to top,
+        rgba(
+            red(@background-body),
+            green(@background-body),
+            blue(@background-body),
+            1
+          )
+          0%,
+        rgba(
+            red(@background-body) / 2,
+            green(@background-body) / 2,
+            blue(@background-body) / 2,
+            0.68
+          )
+          10%,
+        rgba(
+            red(@background-body) / 3,
+            green(@background-body) / 3,
+            blue(@background-body) / 3,
+            0.23
+          )
+          50%,
+        transparent
+      )
+      bottom darken(@background-general, 5%) no-repeat;
+    @toc-transition-in-time: 0.5s;
+    @toc-transition-out-time: 0.5s;
+    @body-transition-in-time: 0.65s;
+    @body-transition-out-time: @toc-transition-out-time;
+    @h1-font-size: calc(@general-font-size + 1rem);
+    @h2-font-size: calc(@general-font-size + 0.7rem);
+    @h3-font-size: calc(@general-font-size + 0.45rem);
+    @h4-font-size: calc(@general-font-size + 0.35rem);
+    @h5-font-size: calc(@general-font-size + 0.2rem);
+    @h6-font-size: calc(@general-font-size + 0.1rem);
+    @h1-color: @header-font-color;
+    @h2-color: lighten(@header-font-color, 10%);
+    @h3-color: lighten(@header-font-color, 20%);
+    @h4-color: lighten(@header-font-color, 30%);
+    @h5-color: lighten(@header-font-color, 40%);
+    @h6-color: lighten(@header-font-color, 45%);
+  }
+  
+  .theme(light) {
+    @font-face {
+      font-family: Roboto;
+      src: url("https://fonts.googleapis.com/css?family=Roboto");
+    }
+    @font-color: #d3d3d3;
+    @background-body: #f5f5f5;
+    @background-general: #ffffff;
+    @general-font-color: #2f3337;
+    @header-font-color: #1f2224;
+    @divider-color: #b9b9b9;
+    @border-color: #9b9b9b;
+    @link-hover-color: #40e0d0;
+    @code-max-block-height: 400px;
+    @code-border-color: #bdbdbd;
+    @code-text-color: #424242;
+    @code-top-size: 0.8rem;
+    @diagram-node-background: darken(@background-general, 5%);
+    @code-highlight-color: linear-gradient(
+      to right,
+      hsla(24, 7%, 14%, 0.15) 50%,
+      hsla(24, 7%, 14%, 0)
+    );
+    @token-property: #4577a3;
+    @token-keyword: #4577a3;
+    @token-comment: #417c37;
+    @token-string: #919053;
+    @token-number: #7a8f6c;
+    @token-punctuation: #030303;
+    @token-selector: #887243;
+    @token-boolean: @token-keyword;
+    @token-class: #36b58a;
+    @token-genericclass: #9ea017;
+    @token-method: #7c8b39;
+    @token-function: #7c8b39;
+    @token-attrname: #848484;
+    @token-attrvalue: @token-property;
+    @code-expand-icon: "https://fonts.gstatic.com/s/i/materialicons/expand_more/v12/24px.svg";
+    @general-font-size: 0.85rem;
+    @toc-left-padding-half: 457px;
+    @toc-expanded-width: 400px;
+    @toc-background: linear-gradient(
+        to top,
+        rgba(
+            red(@background-body),
+            green(@background-body),
+            blue(@background-body),
+            1
+          )
+          0%,
+        rgba(
+            red(@background-body) / 2,
+            green(@background-body) / 2,
+            blue(@background-body) / 2,
+            0.68
+          )
+          10%,
+        rgba(
+            red(@background-body) / 3,
+            green(@background-body) / 3,
+            blue(@background-body) / 3,
+            0.23
+          )
+          50%,
+        transparent
+      )
+      bottom darken(@background-general, 5%) no-repeat;
+    @toc-transition-in-time: 0.5s;
+    @toc-transition-out-time: 0.5s;
+    @body-transition-in-time: 0.65s;
+    @body-transition-out-time: @toc-transition-out-time;
+    @h1-font-size: calc(@general-font-size + 1rem);
+    @h2-font-size: calc(@general-font-size + 0.7rem);
+    @h3-font-size: calc(@general-font-size + 0.45rem);
+    @h4-font-size: calc(@general-font-size + 0.35rem);
+    @h5-font-size: calc(@general-font-size + 0.2rem);
+    @h6-font-size: calc(@general-font-size + 0.1rem);
+    @h1-color: @header-font-color;
+    @h2-color: lighten(@header-font-color, 10%);
+    @h3-color: lighten(@header-font-color, 20%);
+    @h4-color: lighten(@header-font-color, 30%);
+    @h5-color: lighten(@header-font-color, 40%);
+    @h6-color: lighten(@header-font-color, 45%);
+  }
+  
