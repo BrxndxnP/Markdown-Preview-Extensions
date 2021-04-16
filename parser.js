@@ -5,6 +5,7 @@ module.exports = {
       var urls = [
         "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/scripts/toc.js",
         "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/scripts/codeblock.js",
+        "https://raw.githubusercontent.com/BrxndxnP/Markdown-Preview-Extensions/main/scripts/table-cell-visibility.js",
       ];
 
       for (let i = 0; i < urls.length; i++) {
