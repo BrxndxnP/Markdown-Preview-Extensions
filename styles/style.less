@@ -15,6 +15,7 @@ html,
 body {
   background-color: @background-general !important;
   overflow-x: hidden;
+  font: Roboto;
 }
 
 // Self
@@ -28,12 +29,67 @@ body {
   margin-block-start: 0em;
   margin-block-end: 0em;
   color: @general-font-color;
+
+  &:first-child {
+    margin: 0 3px;
+  }
+
 }
 
-// Code tag links
-.markdown-preview.markdown-preview a code {
-  color: #08c !important;
+// Links
+.markdown-preview.markdown-preview a {
+  padding: 0 4px;
+  margin: 0 -2px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: .25s;
+
+  &:hover {
+    // text-decoration: underline;
+    // text-decoration-color: turquoise;
+    transition: .25s;
+    background-color: @link-color;
+    color: @general-font-color;
+  }
+
+  // Links: Code tag
+  code {
+    color: @link-color !important;
+  }
+
+  // Links: Custom button style link
+  &.button-link {
+    font-size: @general-font-size !important;
+    background-color: darken(@background-general, 5%);
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.25s !important;
+    text-decoration-line: none !important;
+
+    width: fit-content !important;
+    color: @link-color !important;
+
+    cursor: pointer;
+    &:hover {
+      background-color: @link-color;
+
+      transition: 0.25s !important;
+      color: @background-general !important;
+      text-decoration-line: none !important;
+    }
+
+    &:focus,
+    &:active {
+      border-width: 0px;
+    }
+
+    &::before {
+      content: @link-return-icon;
+      margin-right: 5px;
+    }
+  }
 }
+
 
 // Strong
 .markdown-preview.markdown-preview strong {
@@ -41,50 +97,48 @@ body {
 }
 
 // Header Tags
-.markdown-preview.markdown-preview {
-  h {
-    &1,
-    &2,
-    &3,
-    &4,
-    &5,
-    &6 {
-      margin-top: 1em;
-      margin-bottom: 4px;
-      font-weight: 500;
-    }
+.markdown-preview.markdown-preview h {
+  &1,
+  &2,
+  &3,
+  &4,
+  &5,
+  &6 {
+    margin-top: 1em;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
 
-    &1 {
-      color: @h1-color;
-      font-size: @h1-font-size;
-      margin-bottom: 16px;
-      border-bottom: thin solid @divider-color;
-    }
+  &1 {
+    color: @h1-color;
+    font-size: @h1-font-size;
+    margin-bottom: 16px;
+    // border-bottom: thin solid @divider-color;
+  }
 
-    &2 {
-      color: @h2-color;
-      font-size: @h2-font-size;
-    }
+  &2 {
+    color: @h2-color;
+    font-size: @h2-font-size;
+  }
 
-    &3 {
-      color: @h3-color;
-      font-size: @h3-font-size;
-    }
+  &3 {
+    color: @h3-color;
+    font-size: @h3-font-size;
+  }
 
-    &4 {
-      color: @h4-color;
-      font-size: @h4-font-size;
-    }
+  &4 {
+    color: @h4-color;
+    font-size: @h4-font-size;
+  }
 
-    &5 {
-      color: @h5-color;
-      font-size: @h5-font-size;
-    }
+  &5 {
+    color: @h5-color;
+    font-size: @h5-font-size;
+  }
 
-    &6 {
-      color: @h6-color;
-      font-size: @h6-font-size;
-    }
+  &6 {
+    color: @h6-color;
+    font-size: @h6-font-size;
   }
 }
 
@@ -104,6 +158,14 @@ body {
     border-bottom-width: 0px;
     border-right-width: 0px;
     border-left-width: 0px;
+  }
+
+  td[data-hidden]{
+    visibility: hidden;
+  }
+
+  td[data-hidden]{
+    visibility: hidden;
   }
 
   th {
@@ -156,17 +218,6 @@ body {
   }
 }
 
-// Links
-.markdown-preview.markdown-preview a {
-  text-decoration: none;
-  transition: 1s;
-
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: turquoise;
-    transition: 1s;
-  }
-}
 
 // Horizontal Rule
 .markdown-preview.markdown-preview hr {
@@ -184,26 +235,24 @@ body {
 
 /*#region ToC */
 
-.md-sidebar-toc {
-  & ul li a {
-    color: @general-font-color;
-    font-size: @general-font-size;
-    font-weight: 400;
-    overflow: hidden;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    // margin: 20px !important;
+.md-sidebar-toc ul li a {
+  color: @general-font-color;
+  font-size: @general-font-size;
+  font-weight: 400;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  // margin: 20px !important;
 
-    &:hover {
-      color: @header-font-color;
-      text-decoration: underline;
-      text-decoration-color: #42b983;
-    }
+  &:hover {
+    color: @header-font-color;
+    text-decoration: underline;
+    text-decoration-color: #42b983;
+  }
 
-    & strong {
-      color: inherit;
-    }
+  & strong {
+    color: inherit;
   }
 }
 
@@ -1036,39 +1085,11 @@ pre[data-role="codeBlock"][class~="language-yaml"] {
 
 /*#endregion Code Blocks */
 
-.button-link {
-  font-size: @general-font-size !important;
-  background-color: @general-font-color;
-  padding: 5px;
-  border-radius: 5px;
-  //   margin: 5px !important;
-  //   margin-bottom: 30px !important;
-  //   margin-left: 30px !important;
-  transition: 0.25s !important;
-  text-decoration-line: none !important;
-
-  width: fit-content !important;
-  color: #005cc8 !important;
-
-  cursor: pointer;
-  &:hover {
-    background-color: #005cc8;
-    transition: 0.25s !important;
-    color: @general-font-color !important;
-    text-decoration-line: none !important;
-  }
-
-  &:focus,
-  &:active {
-    border-width: 0px;
-  }
-}
-
 // <span class="material-icons">
 // keyboard_arrow_up
 // </span>
 
-@icon-arrow_drop_up: "https://fonts.gstatic.com/s/i/materialiconsoutlined/arrow_drop_up/v10/24px.svg";
+
 
 // .markdown-preview.markdown-preview::after {
 //     position: fixed;
@@ -1103,6 +1124,12 @@ pre[data-role="codeBlock"][class~="language-yaml"] {
 
 // }
 
-input[type="checkbox"] {
+.markdown-preview.markdown-preview input[type="checkbox"] {
   cursor: pointer;
+  // transition: .25s;
+
+  // &:hover {
+  //   color: darken
+  //   transition: .25s;
+  // }
 }
